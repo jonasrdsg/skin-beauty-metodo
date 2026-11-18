@@ -13,10 +13,10 @@ s=re.sub(r'data-img="(ANA_[A-Z]+)" src="data:image/gif;base64,[^"]+"',lambda m:'
 s=re.sub(r"var IMGS=\{[^}]*\};\ndocument\.querySelectorAll\('img\[data-img\]'\)[^\n]*\n","",s)
 og='''<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://skin-beauty-metodo-deploy.stayai.space/">
+<meta property="og:url" content="https://skin-beauty-metodo.stayai.space/">
 <meta property="og:title" content="Skin Beauty Método | Curso presencial de clareamento íntimo">
 <meta property="og:description" content="Formação presencial para profissionais habilitadas: raciocínio clínico e tratamentos personalizados de manchas íntimas. 30 e 31 de janeiro de 2027, Savassi, BH. Apenas 5 vagas.">
-<meta property="og:image" content="https://skin-beauty-metodo-deploy.stayai.space/assets/og-image.jpg">
+<meta property="og:image" content="https://skin-beauty-metodo.stayai.space/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" as="image" href="assets/ana-hero-main.webp">'''
 s=s.replace('<link rel="preconnect" href="https://fonts.googleapis.com">',og+'\n<link rel="preconnect" href="https://fonts.googleapis.com">',1)
