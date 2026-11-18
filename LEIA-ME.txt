@@ -1,0 +1,30 @@
+SKIN BEAUTY MÉTODO — PACOTE DE DEPLOY
+=====================================
+
+Conteúdo
+  index.html ............ página completa (HTML, CSS e JS num arquivo só)
+  assets/ ............... fotos, logos, favicon e imagem de compartilhamento
+  _headers .............. cache para Netlify
+  vercel.json ........... cache para Vercel
+  .htaccess ............. cache/compressão para Hostinger, cPanel (Apache)
+  robots.txt
+
+ANTES DE PUBLICAR (no index.html, procure por "CONFIG")
+  1. whatsapp: troque '5531000000000' pelo número comercial (DDI+DDD+número, só dígitos).
+  2. webhook: URL que salva a candidatura (Make/Zapier, Google Apps Script, CRM ou WordPress).
+     Deixe vazio para apenas redirecionar ao WhatsApp.
+  3. Resultados/depoimentos: procure por "FOTO/DEPOIMENTOS" e troque os espaços pelos materiais autorizados.
+  4. Revise o aviso de privacidade (procure por "Aviso de privacidade: TEXTO-BASE").
+  5. og:image — depois de publicar, troque "assets/og-image.jpg" pela URL completa
+     (ex.: https://seudominio.com.br/assets/og-image.jpg) para a prévia no WhatsApp funcionar.
+
+COMO PUBLICAR
+  Netlify ......... app.netlify.com/drop → arraste a PASTA inteira.
+  Vercel .......... vercel.com/new → importe a pasta (ou: npx vercel --prod dentro dela).
+  Hostinger/cPanel  Gerenciador de arquivos → public_html (ou subpasta, ex. /skinbeauty) →
+                    envie o .zip e extraia. Os arquivos ocultos (.htaccess) devem ir junto.
+  WordPress ....... suba a pasta via FTP em /wp-content/uploads/skinbeauty/ e acesse
+                    seudominio.com.br/wp-content/uploads/skinbeauty/ — ou use um subdomínio.
+                    (Colar o HTML num bloco do Elementor não é recomendado: o tema altera o visual.)
+
+Teste A/B da abertura: adicione ?v=b na URL.
