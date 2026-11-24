@@ -1507,18 +1507,17 @@ footer{background:#2E1A15}
 .s-pair__imgs img{width:100%;height:100%;object-fit:cover;display:block}
 .s-pair figcaption{padding:14px 8px 4px;font-size:13px;line-height:1.5;color:#6A4A40}
 .s-pair figcaption b{display:block;margin-bottom:2px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#C96164}
-.s-media{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:18px;max-width:1060px;margin:18px auto 0;align-items:stretch}
-.s-vid{margin:0;padding:10px;border-radius:26px;background:#3E2520;box-shadow:0 30px 50px -36px rgba(62,37,32,.8)}
-.s-vid video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:18px;background:#2A1814}
-.s-vid figcaption{padding:12px 8px 4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F9D991}
+.s-media{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;align-items:stretch}
+.s-pair--vid .s-pair__imgs>div{aspect-ratio:9/16;background:#000}
+.s-pair__imgs video{width:100%;height:100%;object-fit:cover;display:block;background:#EAB3BC}
 .s-print{position:relative;margin:0;padding:22px;border-radius:26px;background:linear-gradient(160deg,#fff,#FCE9E7);display:flex;flex-direction:column;justify-content:center;box-shadow:0 30px 50px -36px rgba(132,82,64,.6)}
 .s-print__tag{align-self:flex-start;padding:6px 12px;border-radius:999px;background:var(--goldm);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#5A3628}
-.s-print img{width:100%;height:auto;margin-top:16px;border-radius:16px;box-shadow:0 14px 30px -20px rgba(62,37,32,.5)}
+.s-print img{width:100%;max-width:330px;height:auto;margin:16px auto 0;border-radius:16px;box-shadow:0 14px 30px -20px rgba(62,37,32,.5)}
 .s-print blockquote{margin:0;padding-top:20px}
 .s-print blockquote p{font:500 clamp(19px,1.6vw,22px)/1.35 var(--serif);font-style:italic;color:#3E2520}
 .s-print cite{display:block;margin-top:10px;font-style:normal;font-size:12px;font-weight:600;color:#C96164}
-@media(max-width:900px){.s-pairs{grid-template-columns:1fr}.s-media{grid-template-columns:1fr 1fr}.s-print{grid-column:1/-1}}
-@media(max-width:600px){.s-pair{padding:8px;border-radius:22px}.s-media{gap:10px}.s-vid{padding:6px;border-radius:20px}.s-vid figcaption{font-size:10px;letter-spacing:.08em}}
+@media(max-width:900px){.s-pairs,.s-media{grid-template-columns:1fr}}
+@media(max-width:600px){.s-pair{padding:8px;border-radius:22px}}
 /* ===== Página de inscrição ===== */
 .ins__top{background:linear-gradient(115deg,var(--r3) 0%,var(--r1) 48%,var(--r2) 100%);padding:clamp(130px,16vh,170px) 0 clamp(120px,14vw,170px);color:#fff;position:relative;overflow:hidden}
 .ins__top::after{content:"";position:absolute;inset:0;background:url("assets/diamond-pattern-w.svg") center/86px 86px repeat;opacity:.18;pointer-events:none}
