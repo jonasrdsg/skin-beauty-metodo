@@ -25,5 +25,7 @@ def fix(s,preload=True):
     assert not re.findall(r'__[A-Z_]{3,}__',s), re.findall(r'__[A-Z_]{3,}__',s)[:5]
     return s
 s=fix(s); si=fix(si,False).replace('<meta property="og:url" content="https://skin-beauty-metodo.stayai.space/">','<meta property="og:url" content="https://skin-beauty-metodo.stayai.space/inscricao.html">')
+import glob
+for f in glob.glob(A+'res-*'): shutil.copy(f,D)
 open('deploy/index.html','w',encoding='utf8').write(s); open('deploy/inscricao.html','w',encoding='utf8').write(si)
 print(len(s)//1024,'KB /',len(si)//1024,'KB')

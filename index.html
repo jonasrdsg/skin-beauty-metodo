@@ -1498,6 +1498,27 @@ footer{background:#2E1A15}
 .s-ticket__msg{margin-top:16px;font-size:13px;line-height:1.55;color:rgba(62,37,32,.7)}
 @media(max-width:900px){.s-ba,.s-quotes{grid-template-columns:1fr}.s-bento--3{grid-template-columns:1fr}}
 @media(max-width:600px){.s-origin__text{font-size:21px}.s-mock--days b{font-size:110px}.s-who__text{font-size:18px}}
+
+/* resultados: pares, vídeos e depoimento */
+.s-pairs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.s-pair{margin:0;padding:12px;border-radius:26px;background:#fff;box-shadow:0 30px 50px -36px rgba(132,82,64,.6)}
+.s-pair__imgs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.s-pair__imgs>div{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:9/15;background:#F4C9CF}
+.s-pair__imgs img{width:100%;height:100%;object-fit:cover;display:block}
+.s-pair figcaption{padding:14px 8px 4px;font-size:13px;line-height:1.5;color:#6A4A40}
+.s-pair figcaption b{display:block;margin-bottom:2px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#C96164}
+.s-media{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:18px;max-width:1060px;margin:18px auto 0;align-items:stretch}
+.s-vid{margin:0;padding:10px;border-radius:26px;background:#3E2520;box-shadow:0 30px 50px -36px rgba(62,37,32,.8)}
+.s-vid video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:18px;background:#2A1814}
+.s-vid figcaption{padding:12px 8px 4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F9D991}
+.s-print{position:relative;margin:0;padding:22px;border-radius:26px;background:linear-gradient(160deg,#fff,#FCE9E7);display:flex;flex-direction:column;justify-content:center;box-shadow:0 30px 50px -36px rgba(132,82,64,.6)}
+.s-print__tag{align-self:flex-start;padding:6px 12px;border-radius:999px;background:var(--goldm);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#5A3628}
+.s-print img{width:100%;height:auto;margin-top:16px;border-radius:16px;box-shadow:0 14px 30px -20px rgba(62,37,32,.5)}
+.s-print blockquote{margin:0;padding-top:20px}
+.s-print blockquote p{font:500 clamp(19px,1.6vw,22px)/1.35 var(--serif);font-style:italic;color:#3E2520}
+.s-print cite{display:block;margin-top:10px;font-style:normal;font-size:12px;font-weight:600;color:#C96164}
+@media(max-width:900px){.s-pairs{grid-template-columns:1fr}.s-media{grid-template-columns:1fr 1fr}.s-print{grid-column:1/-1}}
+@media(max-width:600px){.s-pair{padding:8px;border-radius:22px}.s-media{gap:10px}.s-vid{padding:6px;border-radius:20px}.s-vid figcaption{font-size:10px;letter-spacing:.08em}}
 </style>
 </head>
 <body>
@@ -1818,28 +1839,38 @@ footer{background:#2E1A15}
       </div>
       <p class="s-lead">Cada pele é única. Os fatores associados ao escurecimento e às inflamações podem variar entre pacientes. Por isso, cada tratamento começa com um olhar individualizado para a história e as necessidades de cada paciente.</p>
     </div>
-    <!-- ANTES E DEPOIS: em cada .ba, troque data-antes / data-depois pelos caminhos das fotos autorizadas (mesmo enquadramento e tamanho). -->
-    <div class="s-ba">
-      <figure class="ba rv" data-antes="" data-depois="">
-        <div class="ba__img ba__img--depois"><span class="ba__ph">Foto “depois” autorizada 01</span></div>
-        <div class="ba__img ba__img--antes"><span class="ba__ph">Foto “antes” autorizada 01</span></div>
-        <span class="ba__tag ba__tag--l">Antes</span><span class="ba__tag ba__tag--r">Depois</span>
-        <span class="ba__handle" aria-hidden="true"><i></i></span>
-        <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois — resultado 01">
+    <!-- ANTES E DEPOIS: fotos em assets/res-antes-XX.jpg e assets/res-depois-XX.jpg -->
+    <div class="s-pairs">
+      <figure class="s-pair rv">
+        <div class="s-pair__imgs">
+          <div><img src="assets/res-antes-01.jpg" alt="Antes do tratamento: manchas causadas por depilação com lâmina e por atrito" width="730" height="1280" loading="lazy"><span class="ba__tag ba__tag--l">Antes</span></div>
+          <div><img src="assets/res-depois-01.jpg" alt="Depois do tratamento: pele mais clara e uniforme" width="742" height="1280" loading="lazy"><span class="ba__tag ba__tag--r">Depois</span></div>
+        </div>
+        <figcaption><b>Caso 01</b> Manchas por depilação com lâmina e por atrito · melhora na textura e na tonalidade</figcaption>
       </figure>
-      <figure class="ba rv" style="--d:.1s" data-antes="" data-depois="">
-        <div class="ba__img ba__img--depois"><span class="ba__ph">Foto “depois” autorizada 02</span></div>
-        <div class="ba__img ba__img--antes"><span class="ba__ph">Foto “antes” autorizada 02</span></div>
-        <span class="ba__tag ba__tag--l">Antes</span><span class="ba__tag ba__tag--r">Depois</span>
-        <span class="ba__handle" aria-hidden="true"><i></i></span>
-        <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois — resultado 02">
+      <figure class="s-pair rv" style="--d:.1s">
+        <div class="s-pair__imgs">
+          <div><img src="assets/res-antes-02.jpg" alt="Antes do tratamento: manchas associadas a alterações hormonais após a gestação" width="721" height="1280" loading="lazy"><span class="ba__tag ba__tag--l">Antes</span></div>
+          <div><img src="assets/res-depois-02.jpg" alt="Durante o tratamento: pele mais clara e com aspecto saudável" width="718" height="1280" loading="lazy"><span class="ba__tag ba__tag--r">Durante</span></div>
+        </div>
+        <figcaption><b>Caso 02</b> Queixas hormonais após a gestação · paciente ainda em tratamento</figcaption>
       </figure>
     </div>
-    <!-- DEPOIMENTOS: troque o texto de cada blockquote pelo relato autorizado (sem dados pessoais) -->
-    <div class="s-quotes">
-      <blockquote class="s-q rv"><p>Espaço para o depoimento autorizado 01.</p><cite>Paciente de Ana Paula</cite></blockquote>
-      <blockquote class="s-q rv" style="--d:.08s"><p>Espaço para o depoimento autorizado 02.</p><cite>Paciente de Ana Paula</cite></blockquote>
-      <blockquote class="s-q rv" style="--d:.16s"><p>Espaço para o depoimento autorizado 03.</p><cite>Paciente de Ana Paula</cite></blockquote>
+    <!-- VÍDEOS E DEPOIMENTO -->
+    <div class="s-media">
+      <figure class="s-vid rv">
+        <video src="assets/res-video-01.mp4" poster="assets/res-video-01.jpg" controls playsinline preload="none" width="576" height="1024"></video>
+        <figcaption>Atendimento em clínica</figcaption>
+      </figure>
+      <figure class="s-vid rv" style="--d:.08s">
+        <video src="assets/res-video-02.mp4" poster="assets/res-video-02.jpg" controls playsinline preload="none" width="576" height="1024"></video>
+        <figcaption>Tecnologia aplicada ao tratamento</figcaption>
+      </figure>
+      <figure class="s-print rv" style="--d:.16s">
+        <span class="s-print__tag">Depoimento real</span>
+        <img src="assets/res-depoimento.jpg" alt="Mensagem de paciente: superou minhas expectativas, para além de uma pele mais clara e lisinha, você também me devolveu minha autoestima." width="680" height="740" loading="lazy">
+        <blockquote><p>“Para além de uma pele mais clara e lisinha, você também me devolveu minha autoestima.”</p><cite>Paciente de Ana Paula</cite></blockquote>
+      </figure>
     </div>
     <p class="s-fine s-fine--dark rv">Resultados de pacientes atendidas por Ana Paula com o Skin Beauty Método. A resposta ao tratamento é individual e pode variar entre pacientes.</p>
   </div>
@@ -2000,7 +2031,7 @@ var CONFIG = {
 
   /* ——— Carrosséis de deslizar no celular ——— */
   (function(){
-    var mq=matchMedia('(max-width:600px)'), sels=['#protocolo .s-cards','#oportunidades .s-cols','#programa .s-mods','#turma .s-bento','#resultados .s-quotes'];
+    var mq=matchMedia('(max-width:600px)'), sels=['#protocolo .s-cards','#oportunidades .s-cols','#programa .s-mods','#turma .s-bento','#resultados .s-pairs'];
     var built=false;
     function build(){ if(built||!mq.matches) return; built=true;
       sels.forEach(function(sel){ var r=$(sel); if(!r) return; r.classList.add('m-rail');
