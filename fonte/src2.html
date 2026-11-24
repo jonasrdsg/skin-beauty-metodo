@@ -1352,6 +1352,103 @@ footer{background:#2E1A15}
   .js .m-rail>.rv,.js .m-rail>.rv-zoom,.js .m-rail>.rv-wipe{opacity:1;transform:none;filter:none;clip-path:none}
 }
 @media(max-width:600px) and (prefers-reduced-motion:reduce){.m-hint .ic{animation:none}}
+
+/* ===================== Revisão Ana Paula (nov/2026) ===================== */
+:root{--r1:#E6A5BC;--r2:#EDB3C7;--r3:#DE9FB3;--g1:#F9D991;--g2:#FEF2B8;--g3:#ECC48B;
+  --goldm:linear-gradient(100deg,#C99A55 0%,#ECC48B 18%,#FEF2B8 38%,#F9D991 55%,#ECC48B 75%,#FEF2B8 100%)}
+/* hero rosé + dourado metálico */
+.hx{background:linear-gradient(115deg,var(--r3) 0%,var(--r1) 48%,var(--r2) 100%);color:#fff}
+.hx__bg{background:transparent}
+.hx__bg img{opacity:.35;mix-blend-mode:soft-light}
+.hx__bg::after{background:linear-gradient(90deg,rgba(214,140,166,.55) 0%,rgba(222,159,179,.35) 40%,rgba(237,179,199,0) 70%)}
+.hx__grain{opacity:.05}
+.hx .hx__title{font:600 clamp(40px,min(5.2vw,8vh),82px)/.98 var(--serif);text-transform:uppercase;letter-spacing:.01em;margin:0;color:#fff;filter:drop-shadow(0 2px 2px rgba(120,48,72,.28))}
+.hx .hx__title span{padding-bottom:.04em}
+.hx .hx__title b{background:var(--goldm);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:goldsheen 9s ease-in-out infinite}
+.hx .hx__title .hx__pre b{font-size:.5em;letter-spacing:.14em}
+@keyframes goldsheen{50%{background-position:100% 0}}
+.hx__brand{margin-top:clamp(14px,2.4vh,22px);font:500 clamp(24px,2.2vw,32px)/1.1 var(--serif);color:#fff;text-shadow:0 1px 3px rgba(120,48,72,.3)}
+.hx__claim{margin-top:6px;font-size:clamp(15px,1.2vw,17.5px);font-weight:600;color:#fff;text-shadow:0 1px 3px rgba(120,48,72,.3)}
+.hx .hx__lead{margin-top:clamp(10px,2vh,16px);color:#fff;text-shadow:0 1px 3px rgba(120,48,72,.35);max-width:33rem}
+.hx__btn--fill{background:var(--goldm);background-size:200% 100%;color:#5A3628;box-shadow:0 14px 30px -14px rgba(150,90,40,.7)}
+.hx__btn--fill:hover{background-position:100% 0;box-shadow:0 18px 34px -14px rgba(150,90,40,.8)}
+.hx__btn--line{color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.75)}
+.hx__btn--line:hover{background:rgba(255,255,255,.14)}
+.hx__dots i{background:var(--goldm);box-shadow:0 0 0 2px var(--r1)}
+.hx__proof p{color:rgba(255,255,255,.92);text-shadow:0 1px 2px rgba(120,48,72,.3)}
+.hx__proof b{color:#fff}
+.hx__arch{background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.42) 60%,rgba(255,255,255,.12) 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.8),0 30px 60px -40px rgba(140,60,90,.5)}
+.hx__logo i{background:linear-gradient(130deg,#C99A55 0%,#ECC48B 30%,#FEF2B8 50%,#F9D991 70%,#ECC48B 100%);opacity:.95}
+.hx__logo{filter:drop-shadow(0 1px 1px rgba(150,95,40,.35))}
+.hx__floor{background:linear-gradient(180deg,rgba(230,165,188,0) 0%,rgba(222,159,179,.6) 60%,rgba(222,159,179,.95) 100%)}
+.hx__floor::after{background:radial-gradient(closest-side,rgba(140,60,90,.3),rgba(140,60,90,0))}
+.head:not(.is-stuck) .brand,.head:not(.is-stuck) .brand b{color:#fff}
+.head:not(.is-stuck) .brand small,.head:not(.is-stuck) .brand .diamond{color:var(--g2)}
+.head:not(.is-stuck) .nav__links{background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 1px rgba(255,255,255,.45)}
+.head:not(.is-stuck) .nav__links a{color:#fff}
+.head:not(.is-stuck) .nav__links a:hover{background:rgba(255,255,255,.22);color:#fff}
+.nav .btn,.head:not(.is-stuck) .nav .btn{background:var(--goldm);background-size:200% 100%;color:#5A3628}
+@media(max-width:1280px){.nav .btn span{font-size:10.5px}}
+@media(max-width:900px){
+  .hx__bg::after{background:linear-gradient(180deg,rgba(214,140,166,.45) 0%,rgba(222,159,179,.3) 60%,rgba(237,179,199,0) 100%)}
+  .hx .hx__title{font-size:clamp(38px,11.5vw,56px)}
+}
+@media(max-width:600px){.hx .hx__title{font-size:clamp(36px,11vw,46px)}.hx__brand{font-size:24px}.hx__claim{font-size:14.5px}}
+/* diferenciais */
+.s-eyebrow--wide{letter-spacing:.5em}
+.s-head--solo{grid-template-columns:1fr}
+.s-head--solo .s-h2{max-width:22ch}
+/* origem */
+.s-origin{max-width:980px;margin:0 auto clamp(40px,5vw,60px);text-align:center}
+.s-origin__text{font:400 clamp(22px,2.4vw,34px)/1.35 "Manrope",var(--sans);letter-spacing:-.025em;color:#3E2520;text-wrap:balance}
+.s-origin__text em{font-style:normal;color:#C96164}
+.s-tile--pattern{position:relative;isolation:isolate}
+.s-tile--pattern::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:url("__DIA_PATTERN__") center/86px 86px repeat;opacity:.13}
+.s-tile--soft h3{font:500 clamp(21px,1.9vw,26px)/1.2 "Manrope",var(--sans);letter-spacing:-.03em;color:#3E2520}
+.s-tile--photo img{object-position:50% 12%}
+.s-tile--photo figcaption{top:auto;bottom:22px;font-size:20px}
+.s-tile--photo figcaption small{display:block;margin-top:6px;font-size:12px;letter-spacing:0;opacity:.85}
+.s-tile--photo::after{background:linear-gradient(180deg,transparent 45%,rgba(62,37,32,.7))}
+/* turma: 3 cartões */
+.s-bento--3{grid-template-columns:repeat(3,1fr)}
+.s-bento--3 .s-b{grid-column:auto}
+.s-mock--days{display:flex;align-items:baseline;justify-content:center;gap:10px;color:#3E2520}
+.s-mock--days b{font:200 clamp(110px,10vw,150px)/1 "Manrope",var(--sans);letter-spacing:-.06em}
+.s-mock--days span{font:500 26px/1 "Manrope",var(--sans)}
+/* resultados: antes e depois */
+.s-ba{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ba{position:relative;margin:0;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F6DCDF;--pos:50%;touch-action:pan-y;box-shadow:0 30px 50px -36px rgba(132,82,64,.6)}
+.ba__img{position:absolute;inset:0;background:center/cover no-repeat;display:grid;place-items:center}
+.ba__img--depois{background-color:#F4C9CF}
+.ba__img--antes{background-color:#EAB3BC;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba__img.has .ba__ph{display:none}
+.ba__ph{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#845240;text-align:center;padding:0 20px}
+.ba__ph{position:absolute;top:50%;width:50%;transform:translateY(-50%);padding:0 18px}.ba__img--antes .ba__ph{left:0}.ba__img--depois .ba__ph{right:0}
+.ba__tag{position:absolute;top:14px;z-index:2;padding:6px 12px;border-radius:999px;background:rgba(62,37,32,.72);color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;pointer-events:none}
+.ba__tag--l{left:14px}.ba__tag--r{right:14px}
+.ba__handle{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;z-index:2;pointer-events:none;box-shadow:0 0 10px rgba(0,0,0,.25)}
+.ba__handle i{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px;border-radius:50%;background:#fff;box-shadow:0 8px 20px rgba(62,37,32,.35)}
+.ba__handle i::before,.ba__handle i::after{content:"";position:absolute;top:50%;width:8px;height:8px;margin-top:-4px;border:solid #845240;border-width:0 0 2px 2px}
+.ba__handle i::before{left:11px;transform:rotate(45deg)}.ba__handle i::after{right:11px;transform:rotate(-135deg)}
+.ba__range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:3;-webkit-appearance:none;appearance:none}
+.ba__range:focus-visible+*{outline:none}
+.ba:focus-within{outline:2px solid #C96164;outline-offset:3px}
+.s-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.s-q{margin:0;padding:26px 26px 24px;border-radius:22px;background:#fff;border:1px solid rgba(132,82,64,.08);box-shadow:0 24px 40px -32px rgba(132,82,64,.55)}
+.s-q::before{content:"“";display:block;height:28px;font:400 64px/.9 var(--serif);color:#E6A5BC}
+.s-q p{font:400 16px/1.6 "Manrope",var(--sans);color:#3E2520}
+.s-q cite{display:block;margin-top:16px;font-style:normal;font-size:12px;font-weight:600;color:#C96164}
+/* para quem */
+.s-who{max-width:860px;margin:0 auto;text-align:center}
+.s-who__text{margin-top:22px;font:400 clamp(19px,1.8vw,24px)/1.5 "Manrope",var(--sans);letter-spacing:-.015em;color:#3E2520}
+.s-who__note{display:inline-flex;align-items:flex-start;gap:10px;margin:22px auto 30px;padding:14px 20px;border-radius:16px;background:#FCE9E7;font-size:14px;line-height:1.55;color:#6A4A40;text-align:left}
+.s-who__note .ic{flex:none;width:18px;height:18px;margin-top:1px;color:#C96164;stroke-width:2.2}
+/* oferta */
+.s-h2--long{font-size:clamp(26px,2.7vw,40px);line-height:1.15}
+.s-ticket__pre{margin-top:4px}
+.s-ticket__msg{margin-top:16px;font-size:13px;line-height:1.55;color:rgba(62,37,32,.7)}
+@media(max-width:900px){.s-ba,.s-quotes{grid-template-columns:1fr}.s-bento--3{grid-template-columns:1fr}}
+@media(max-width:600px){.s-origin__text{font-size:21px}.s-mock--days b{font-size:110px}.s-who__text{font-size:18px}}
 </style>
 </head>
 <body>
@@ -1411,15 +1508,15 @@ footer{background:#2E1A15}
       </a>
       <nav aria-label="Seções">
         <ul class="nav__links" id="links">
-          <li><a href="#metodo">O método</a></li>
+          <li><a href="#oportunidades">Diferenciais</a></li>
           <li><a href="#programa">Programação</a></li>
           <li><a href="#turma">A turma</a></li>
-          <li><a href="#docente">Ana Paula</a></li>
+          <li><a href="#metodo">Ana Paula</a></li>
           <li><a href="#para-quem">Para quem</a></li>
           <li><a href="#duvidas">Dúvidas</a></li>
         </ul>
       </nav>
-      <a class="btn" href="#candidatura"><span>Candidatar-me</span> <i aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></i></a>
+      <a class="btn" href="inscricao.html"><span>Quero garantir minha vaga</span> <i aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></i></a>
       <div class="nav__bar" aria-hidden="true"><i id="prog"></i></div>
     </div>
   </header>
@@ -1434,21 +1531,21 @@ footer{background:#2E1A15}
   <div class="hero__stage" id="stage">
     <div class="wrap hx__grid">
       <div class="hx__copy">
-        <p class="hx__eyebrow fx"><i></i>Curso presencial de clareamento íntimo</p>
-        <h1 id="hero-title" aria-label="Entenda a pele. Desenvolva seu raciocínio clínico. Crie tratamentos personalizados.">
-          <span><b style="--i:0">Entenda a pele.</b></span>
-          <span><b style="--i:1">Desenvolva seu <em>raciocínio</em></b></span>
-          <span><b style="--i:2"><em>clínico.</em> Crie tratamentos</b></span>
-          <span><b style="--i:3">personalizados.</b></span>
+        <h1 id="hero-title" class="hx__title" aria-label="Curso presencial de clareamento íntimo">
+          <span class="hx__pre"><b style="--i:0">Curso presencial de</b></span>
+          <span><b style="--i:1">Clareamento</b></span>
+          <span><b style="--i:2">Íntimo</b></span>
         </h1>
-        <p class="hx__lead fx" id="hero-lead" style="--d:.7s">Aprenda a compreender os fatores associados às manchas íntimas e a desenvolver tratamentos de acordo com as necessidades de cada paciente, com segurança e autonomia profissional.</p>
+        <p class="hx__brand fx" style="--d:.55s">Skin Beauty Método</p>
+        <p class="hx__claim fx" style="--d:.65s">Raciocínio clínico aplicado ao clareamento íntimo.</p>
+        <p class="hx__lead fx" id="hero-lead" style="--d:.75s">Aprenda a desenvolver tratamentos personalizados para manchas da região íntima, com segurança e sem depender de protocolos prontos, considerando as necessidades específicas da pele de cada paciente.</p>
         <div class="hx__ctas fx" style="--d:.85s">
-          <a class="hx__btn hx__btn--fill" href="#candidatura" id="hero-cta"><span>Quero me candidatar a uma das 5 vagas</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="hx__btn hx__btn--fill" href="inscricao.html" id="hero-cta"><span>Quero garantir minha vaga</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <a class="hx__btn hx__btn--line" href="#programa">Ver a programação</a>
         </div>
         <div class="hx__proof fx" style="--d:1s">
           <span class="hx__dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-          <p><b>Turma com apenas 5 vagas</b>30 e 31 de janeiro de 2027 · Savassi, Belo Horizonte</p>
+          <p><b>Turma com apenas 5 vagas</b>30 e 31 de janeiro de 2027 · Belo Horizonte</p>
         </div>
       </div>
 
@@ -1463,10 +1560,6 @@ footer{background:#2E1A15}
         <div class="hx__card hx__card--a fx" style="--d:1.15s">
           <div class="row"><div><h3>Prática supervisionada</h3><p>Dia 02 em modelos, com orientação de Ana Paula</p></div><b>2 dias</b></div>
           <div class="hx__bar"><i></i></div>
-        </div>
-        <div class="hx__card hx__card--b fx" style="--d:1.35s">
-          <h3>Da anamnese ao plano</h3><p>Raciocínio clínico aplicado a tratamentos personalizados</p>
-          <svg viewBox="0 0 200 46" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="hxg" x1="0" x2="1"><stop offset="0" stop-color="#ECA6AC"/><stop offset="1" stop-color="#AB8851"/></linearGradient></defs><path d="M2 40 C28 39 40 31 62 31 S94 27 112 22 S148 19 166 11 S188 6 197 4" fill="none" stroke="url(#hxg)" stroke-width="2" stroke-linecap="round"/><circle cx="197" cy="4" r="3" fill="#AB8851"/></svg>
         </div>
       </div>
     </div>
@@ -1503,73 +1596,62 @@ footer{background:#2E1A15}
       <article class="s-card rv" style="--d:.12s"><span class="s-ico"><svg class="ic"><use href="#i-sliders"/></svg></span><h3>Programa personalizado</h3><p>Desenvolver um programa personalizado, em vez de repetir a mesma conduta para todos os casos.</p></article>
       <article class="s-card rv"><span class="s-ico"><svg class="ic"><use href="#i-refresh"/></svg></span><h3>Reavaliar e ajustar</h3><p>Reconhecer quando é necessário reavaliar ou ajustar o planejamento.</p></article>
       <article class="s-card rv" style="--d:.06s"><span class="s-ico"><svg class="ic"><use href="#i-home"/></svg></span><h3>Cuidados domiciliares</h3><p>Orientar os cuidados domiciliares de acordo com as necessidades da paciente.</p></article>
-      <article class="s-card rv" style="--d:.12s"><span class="s-ico"><svg class="ic"><use href="#i-shield"/></svg></span><h3>Decisões seguras</h3><p>Tomar decisões com maior segurança, respeitando a própria habilitação profissional.</p></article>
+      <article class="s-card rv" style="--d:.12s"><span class="s-ico"><svg class="ic"><use href="#i-shield"/></svg></span><h3>Decisões seguras</h3><p>Desenvolver tratamentos com segurança, com base no raciocínio clínico e nas necessidades de cada pele.</p></article>
     </div>
     <div class="s-callout rv">
       <span class="s-callout__mark diamond" aria-hidden="true"></span>
       <div>
-        <p>O Skin Beauty Método ensina a integrar esses conhecimentos para desenvolver raciocínio clínico e construir tratamentos personalizados para manchas íntimas.</p>
-        <strong>O diferencial está em compreender o motivo de cada escolha e acompanhar a resposta da pele ao longo do tratamento.</strong>
+        <strong>Domine a metodologia de clareamento íntimo Skin Beauty Método e lote sua agenda de pacientes!</strong>
+        <p>Participe da nossa formação presencial. Serão apenas 5 vagas.</p>
       </div>
-      <a class="s-btn s-btn--light" href="#candidatura">Quero conhecer a formação <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="s-btn s-btn--light" href="inscricao.html">Quero garantir minha vaga <svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ============ OPORTUNIDADES ============ -->
+<!-- ============ DIFERENCIAIS ============ -->
 <section class="s s--dark s-glow" id="oportunidades">
   <div class="wrap">
-    <div class="s-head rv">
+    <div class="s-head s-head--solo rv">
       <div>
-        <p class="s-eyebrow">Possibilidades profissionais</p>
-        <h2 class="s-h2">Conhecimento para ampliar suas <em>possibilidades profissionais</em></h2>
+        <p class="s-eyebrow s-eyebrow--wide">Diferenciais</p>
+        <h2 class="s-h2">Por que a formação <em>Skin Beauty Método</em> funciona?</h2>
       </div>
-      <p class="s-lead">Ao aprender a desenvolver tratamentos personalizados de manchas íntimas, você poderá incorporar uma abordagem especializada ao seu atendimento, conforme sua habilitação profissional.</p>
     </div>
     <div class="s-cols">
-      <article class="rv"><svg class="ic"><use href="#i-layers"/></svg><h3>Ampliar seu portfólio de serviços</h3><p>Desenvolver conhecimentos para estruturar uma linha de atendimento voltada às manchas íntimas, considerando a demanda do seu mercado e as suas atribuições profissionais.</p></article>
-      <article class="rv" style="--d:.06s"><svg class="ic"><use href="#i-gem"/></svg><h3>Programas de maior valor agregado</h3><p>Planejar e apresentar tratamentos fundamentados nas necessidades da pele e no acompanhamento de cada paciente.</p></article>
-      <article class="rv" style="--d:.12s"><svg class="ic"><use href="#i-compass"/></svg><h3>Diferenciar seu posicionamento</h3><p>Comunicar uma atuação baseada em raciocínio clínico e personalização dos tratamentos, demonstrando o fundamento das suas escolhas profissionais.</p></article>
-      <article class="rv" style="--d:.18s"><svg class="ic"><use href="#i-trend"/></svg><h3>Novas possibilidades de faturamento</h3><p>Ampliar as possibilidades de serviços e receitas de acordo com a demanda, a precificação, a capacidade de atendimento e a aquisição de clientes.</p></article>
-      <article class="rv" style="--d:.24s"><svg class="ic"><use href="#i-shield"/></svg><h3>Segurança na condução dos casos</h3><p>Compreender os fundamentos das condutas, acompanhar a resposta da pele e reconhecer quando é necessário ajustar o planejamento ou encaminhar um caso.</p></article>
+      <article class="rv"><svg class="ic"><use href="#i-award"/></svg><h3>Referência em clareamento íntimo</h3><p>Com atendimento clínico de pacientes de diversas cidades do Brasil e de outros países.</p></article>
+      <article class="rv" style="--d:.06s"><svg class="ic"><use href="#i-clock"/></svg><h3>14 anos de experiência clínica</h3><p>Com resultados documentados em seus atendimentos.</p></article>
+      <article class="rv" style="--d:.12s"><svg class="ic"><use href="#i-sliders"/></svg><h3>Raciocínio clínico aplicado</h3><p>Aprenda a estruturar programas de tratamento personalizados para alcançar resultados no clareamento íntimo.</p></article>
+      <article class="rv" style="--d:.18s"><svg class="ic"><use href="#i-users"/></svg><h3>Seleção de pacientes</h3><p>Critérios claros e seguros para identificar as pacientes indicadas para o tratamento.</p></article>
+      <article class="rv" style="--d:.24s"><svg class="ic"><use href="#i-shield"/></svg><h3>Segurança no tratamento</h3><p>Aprenda a reconhecer riscos e conduzir tratamentos com segurança.</p></article>
     </div>
-    <p class="s-fine rv"><b>Conhecimento especializado pode criar oportunidades quando aplicado com responsabilidade.</b> Os resultados clínicos e financeiros variam conforme a habilitação, a experiência, a aplicação dos conhecimentos, a demanda e as características de cada paciente. A formação não garante faturamento, clientela ou resultados específicos.</p>
   </div>
 </section>
 
-<!-- ============ O MÉTODO ============ -->
+<!-- ============ ORIGEM DO MÉTODO ============ -->
 <section class="s s--light" id="metodo">
   <div class="wrap">
-    <div class="s-statement rv">
-      <span class="s-tag">Conheça o Skin Beauty Método</span>
-      <h2 class="s-h2">Desenvolvido a partir da experiência clínica de Ana Paula, o método ensina a <em>compreender as necessidades da pele</em> e desenvolver tratamentos personalizados para manchas íntimas.</h2>
+    <div class="s-origin rv">
+      <p class="s-origin__text">O Skin Beauty Método nasceu da busca de Ana Paula por tratar as próprias manchas. Ao reconhecer o mesmo incômodo em outras mulheres, passou a oferecer o tratamento em sua clínica. Hoje, compartilha essa experiência em uma formação de <em>raciocínio clínico aplicado ao clareamento íntimo</em>, para preparar profissionais para essa demanda.</p>
     </div>
     <div class="s-bento3">
-      <article class="s-tile s-tile--soft rv">
-        <span class="s-ico s-ico--line"><svg class="ic"><use href="#i-heart"/></svg></span>
-        <p>Cada paciente apresenta um histórico, fatores associados e uma resposta própria ao tratamento. Por isso, compreender a pele é essencial para fundamentar as escolhas e adaptar a conduta ao longo do acompanhamento.</p>
-        <ul class="s-mini"><li><svg class="ic"><use href="#i-book"/></svg>Conteúdo teórico</li><li><svg class="ic"><use href="#i-steth"/></svg>Prática supervisionada</li><li><svg class="ic"><use href="#i-chat"/></svg>Suporte após o curso</li></ul>
-        <a class="s-btn s-btn--dark" href="#candidatura">Quero aprender o Skin Beauty Método <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <article class="s-tile s-tile--soft s-tile--pattern rv">
+        <span class="s-ico s-ico--line"><svg class="ic"><use href="#i-compass"/></svg></span>
+        <h3>Encurte o caminho entre aprender e aplicar</h3>
+        <p>Aprenda com a experiência de quem já percorreu esse caminho. Leve para sua clínica conhecimentos que ajudam a transformar inseguranças em preparo.</p>
+        <a class="s-btn s-btn--dark" href="inscricao.html">Quero garantir minha vaga <svg class="ic"><use href="#i-arrow"/></svg></a>
       </article>
       <figure class="s-tile s-tile--photo rv" style="--d:.08s">
-        <img data-img="ANA_DOCENTE" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Ana Paula Alves de Souza" width="536" height="670">
-        <figcaption>Raciocínio clínico</figcaption>
+        <!-- FOTO: Ana Paula de blazer branco (enviar o arquivo original para melhor nitidez) -->
+        <img src="__ANA_BRANCO__" alt="Ana Paula Alves de Souza, criadora do Skin Beauty Método" width="484" height="988" loading="lazy">
+        <figcaption>Ana Paula Alves de Souza<small>Esteticista e cosmetóloga · 14 anos de experiência clínica</small></figcaption>
       </figure>
-      <article class="s-tile s-tile--soft s-tile--stack rv" style="--d:.16s">
-        <div class="s-stack" aria-hidden="true">
-          <img data-img="ANA_TURMA" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="520" height="650">
-          <img data-img="ANA_BLAZER" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="720" height="1008">
-        </div>
-        <p>Na formação, você aprenderá a desenvolver raciocínio clínico para relacionar essas informações e construir seu planejamento, respeitando indicações, contraindicações e os limites da sua atuação profissional.</p>
-        <p class="s-small">Os fundamentos e a aplicação da metodologia serão ensinados durante o curso, com conteúdo teórico e prática supervisionada em modelos.</p>
+      <article class="s-tile s-tile--soft s-tile--pattern rv" style="--d:.16s">
+        <span class="s-ico s-ico--line"><svg class="ic"><use href="#i-chat"/></svg></span>
+        <h3>Você não precisa começar sozinha</h3>
+        <p>Após a formação, conte com 90 dias de suporte direto com Ana Paula para esclarecer dúvidas e receber orientação na aplicação da metodologia aos casos das suas pacientes.</p>
       </article>
     </div>
-    <ul class="s-stats rv">
-      <li><b class="num">2</b><span>dias de formação presencial</span></li>
-      <li><b class="num">5</b><span>vagas nesta turma</span></li>
-      <li><b class="num">90</b><span>dias de suporte após o curso</span></li>
-      <li><b class="num">14</b><span>anos de experiência clínica</span></li>
-    </ul>
   </div>
 </section>
 
@@ -1581,17 +1663,12 @@ footer{background:#2E1A15}
       <div>
         <p class="s-eyebrow">Programação</p>
         <h2 class="s-h2">O que você vai aprender nos <em>dois dias</em> de formação</h2>
-        <a class="s-btn s-btn--outline" href="#candidatura" style="margin-top:26px">Quero me candidatar</a>
       </div>
-      <div>
-        <p class="s-lead">Uma imersão nos conhecimentos necessários para compreender a pele, relacionar fatores associados às manchas íntimas e desenvolver planos de tratamento personalizados.</p>
-        <p class="s-lead" style="margin-top:14px">O segundo dia será dedicado à aplicação prática dos conhecimentos apresentados, com orientação de Ana Paula.</p>
-      </div>
+      <p class="s-lead">Do aprendizado à aplicação: dois dias de formação em clareamento íntimo, com estudo de casos, prática supervisionada em modelos e uma aula de marketing e vendas para apresentar e valorizar esse serviço na sua clínica.</p>
     </div>
     <div class="s-mods">
       <article class="s-mod rv">
         <header><span class="s-mod__ico"><svg class="ic"><use href="#i-book"/></svg></span><div><small>Dia 01 · 30 de janeiro de 2027</small><h3>Fundamentos, raciocínio clínico e metodologia</h3></div></header>
-        <p>Uma imersão nos conhecimentos necessários para compreender a pele, relacionar fatores associados às manchas íntimas e desenvolver planos de tratamento personalizados.</p>
         <p class="s-mod__label">Conteúdo programático</p>
         <ul>
           <li>Introdução ao Skin Beauty Método.</li>
@@ -1607,7 +1684,7 @@ footer{background:#2E1A15}
       </article>
       <article class="s-mod s-mod--special rv" style="--d:.08s">
         <header><span class="s-mod__ico"><svg class="ic"><use href="#i-mic"/></svg></span><div><small>Conteúdo especial · Dia 01</small><h3>Marketing e vendas</h3></div></header>
-        <p>Participação de <b>Waltinho Foguete</b>, mentor de profissionais da beleza, com uma aula sobre posicionamento, valorização profissional e estratégias comerciais para serviços e conhecimentos especializados.</p>
+        <p>Aula com <b>Waltinho Foguete</b> sobre posicionamento, valorização do seu trabalho e estratégias de venda para o atendimento em clareamento íntimo.</p>
         <ul>
           <li>Posicionamento.</li>
           <li>Valorização profissional.</li>
@@ -1628,7 +1705,6 @@ footer{background:#2E1A15}
         </ul>
       </article>
     </div>
-    <p class="s-note rv">Uma experiência em turma reduzida para permitir orientação próxima, acompanhar o desenvolvimento do raciocínio clínico e esclarecer as dúvidas das participantes durante as atividades.</p>
   </div>
 </section>
 
@@ -1637,49 +1713,25 @@ footer{background:#2E1A15}
   <div class="wrap">
     <div class="s-center rv">
       <p class="s-eyebrow">Turma exclusiva</p>
-      <h2 class="s-h2">Uma turma de apenas <em>cinco</em> profissionais</h2>
-      <p class="s-lead">Esta turma presencial do Skin Beauty Método terá somente cinco participantes. A proposta é oferecer proximidade durante o aprendizado, com mais espaço para perguntas, discussão dos casos e orientação durante a prática supervisionada.</p>
+      <h2 class="s-h2">Uma turma de apenas <em>5</em> profissionais</h2>
+      <p class="s-lead">Uma turma reduzida para você praticar com orientação próxima de Ana Paula, discutir casos e esclarecer suas dúvidas.</p>
       <span class="s-pill">O que está incluído na sua formação</span>
     </div>
-    <div class="s-bento">
-      <article class="s-b s-b--dark s-b--wide rv">
-        <div class="s-b__top"><span class="s-b__tag">Material 01</span><span class="s-b__tag s-b__tag--ghost">Incluso</span></div>
+    <div class="s-bento s-bento--3">
+      <article class="s-b s-b--dark rv">
+        <div class="s-b__top"><span class="s-b__tag">Material</span><span class="s-b__tag s-b__tag--ghost">Incluso</span></div>
         <div class="s-mock s-mock--book" aria-hidden="true">
-          <div class="book"><span class="book__logo"></span><small>Apostila · conteúdo da metodologia</small></div>
+          <div class="book"><span class="book__logo"></span><small>Apostila · Skin Beauty Método</small></div>
           <div class="sheetx"><i></i><i></i><i></i><i></i></div>
         </div>
-        <h3>Apostila com o conteúdo da metodologia</h3>
-        <p>Incluída na sua formação presencial do Skin Beauty Método.</p>
+        <h3>Apostila do Skin Beauty Método</h3>
+        <p>Conteúdo da metodologia e materiais de apoio para consulta durante e após a formação.</p>
       </article>
-      <article class="s-b s-b--rose s-b--wide rv" style="--d:.08s">
-        <div class="s-b__top"><span class="s-b__tag">Suporte</span><span class="s-b__tag s-b__tag--ghost">90 dias</span></div>
-        <div class="s-mock s-mock--chat" aria-hidden="true">
-          <div class="chat">
-            <div class="chat__head"><img data-img="ANA_BLAZER" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""><div><b>Ana Paula Alves de Souza</b><small>WhatsApp profissional</small></div></div>
-            <p class="chat__b chat__b--in">Dúvidas sobre a aplicação da metodologia</p>
-            <p class="chat__b chat__b--out">Por 90 dias, a partir do término do curso</p>
-          </div>
-        </div>
-        <h3>90 dias de suporte após o curso</h3>
-        <p>Para esclarecimento de dúvidas sobre a aplicação da metodologia, pelo WhatsApp profissional de Ana Paula.</p>
-      </article>
-      <article class="s-b s-b--white rv">
-        <div class="s-b__top"><span class="s-b__tag">Material 02</span></div>
-        <div class="s-mock s-mock--form" aria-hidden="true">
-          <div class="form1"><b>Ficha de anamnese</b><span><i></i>Histórico</span><span><i class="on"></i>Fototipo</span><span><i></i>Fatores associados</span><span><i class="on"></i>Cuidados domiciliares</span></div>
-          <div class="form2"><b>Orientações</b><em></em><em></em><em></em></div>
-        </div>
-        <h3>Ficha de anamnese e orientações domiciliares</h3>
-        <p>Modelo de ficha de anamnese especializada e modelo de orientações de cuidados domiciliares.</p>
-      </article>
-      <article class="s-b s-b--tint rv" style="--d:.08s">
-        <div class="s-b__top"><span class="s-b__tag">Material 03</span></div>
-        <div class="s-mock s-mock--fitz" aria-hidden="true">
-          <div class="fitz"><i style="--c:#F6DCCB">I</i><i style="--c:#EBC3A4">II</i><i style="--c:#D9A47E">III</i><i style="--c:#B9805A">IV</i><i style="--c:#8E5A3C">V</i><i style="--c:#5A3624">VI</i></div>
-          <div class="lens"><svg class="ic"><use href="#i-search"/></svg></div>
-        </div>
-        <h3>Lupa de aumento e escala de Fitzpatrick</h3>
-        <p>Lupa para auxiliar a observação visual da pele e material de referência da escala de Fitzpatrick.</p>
+      <article class="s-b s-b--rose rv" style="--d:.08s">
+        <div class="s-b__top"><span class="s-b__tag">Suporte</span><span class="s-b__tag s-b__tag--ghost">Após o curso</span></div>
+        <div class="s-mock s-mock--days" aria-hidden="true"><b class="num">90</b><span>dias</span></div>
+        <h3>90 dias de suporte direto com Ana Paula</h3>
+        <p>Esclareça suas dúvidas sobre a aplicação da metodologia pelo WhatsApp profissional, durante 90 dias após o término do curso.</p>
       </article>
       <article class="s-b s-b--dark rv" style="--d:.16s">
         <div class="s-b__top"><span class="s-b__tag">Certificado</span></div>
@@ -1687,12 +1739,12 @@ footer{background:#2E1A15}
           <div class="cert"><span class="diamond"></span><b>Certificado de participação</b><small>Skin Beauty Método</small><em></em></div>
         </div>
         <h3>Certificado de participação</h3>
-        <p>Com a carga horária correspondente às atividades da formação.</p>
+        <p>Com a carga horária correspondente às atividades realizadas na formação.</p>
       </article>
     </div>
     <ul class="s-checks rv">
-      <li><svg class="ic"><use href="#i-check"/></svg>Dois dias de formação presencial.</li>
-      <li><svg class="ic"><use href="#i-check"/></svg>Materiais e descartáveis necessários às atividades práticas, para utilização durante o curso.</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Lupa de aumento individual para utilizar na formação e levar para seus atendimentos.</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Materiais e descartáveis para utilização nas atividades práticas durante o curso.</li>
       <li><svg class="ic"><use href="#i-check"/></svg>Café da manhã nos dois dias.</li>
     </ul>
   </div>
@@ -1702,121 +1754,77 @@ footer{background:#2E1A15}
 <section class="s s--light s-cta">
   <div class="wrap s-center rv">
     <h2 class="s-h2">Seu próximo passo no clareamento íntimo começa com <em>uma conversa</em></h2>
-    <a class="s-btn s-btn--grad" href="#candidatura">Quero me candidatar a uma das 5 vagas <svg class="ic"><use href="#i-arrow"/></svg></a>
-    <p class="s-trust"><span><svg class="ic"><use href="#i-clip"/></svg>Candidatura breve</span><span><svg class="ic"><use href="#i-chat"/></svg>Conversa pelo WhatsApp</span><span><svg class="ic"><use href="#i-users"/></svg>Apenas 5 vagas</span></p>
-  </div>
-</section>
-
-<!-- ============ DOCENTE ============ -->
-<section class="s s--tint" id="docente">
-  <div class="wrap s-mentor">
-    <figure class="s-mentor__art rv">
-      <img data-img="ANA_DOCENTE" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Ana Paula Alves de Souza, esteticista e cosmetóloga" width="536" height="670">
-      <span class="s-mentor__seal" aria-hidden="true"><span class="diamond"></span></span>
-    </figure>
-    <div class="rv" style="--d:.1s">
-      <p class="s-eyebrow">Quem vai conduzir sua formação</p>
-      <h2 class="s-h2">Quem é a <em>Ana Paula</em></h2>
-      <p class="s-role">Ana Paula Alves de Souza · Esteticista e cosmetóloga graduada · 14 anos de experiência clínica</p>
-      <p class="s-lead">A trajetória de Ana Paula na estética é marcada pelo estudo da pele e pela construção de tratamentos personalizados, fundamentados no raciocínio clínico e no acompanhamento da resposta de cada paciente.</p>
-      <p class="s-body">Sua dedicação ao tratamento de manchas também nasceu de uma experiência pessoal, que a motivou a estudar e buscar formas de cuidar da própria pele. Ao perceber que outras mulheres enfrentavam o mesmo desconforto, passou a compartilhar e oferecer seu trabalho com tratamentos de manchas íntimas.</p>
-      <div class="s-mentor__stats">
-        <div><b class="num">14</b><span>anos de atuação clínica</span></div>
-        <div><b class="num">+10 mil</b><span>atendimentos estimados em sua trajetória profissional</span></div>
-      </div>
-      <p class="s-body">Essa vivência fundamenta o Skin Beauty Método. Agora, Ana Paula compartilha esses conhecimentos em uma formação presencial com teoria, prática supervisionada e suporte após o curso.</p>
-      <p class="s-sign">Da experiência clínica para a formação de profissionais.</p>
-    </div>
+    <a class="s-btn s-btn--grad" href="inscricao.html">Quero garantir minha vaga <svg class="ic"><use href="#i-arrow"/></svg></a>
+    <p class="s-trust"><span><svg class="ic"><use href="#i-clip"/></svg>Formulário rápido</span><span><svg class="ic"><use href="#i-chat"/></svg>Atendimento pelo WhatsApp</span><span><svg class="ic"><use href="#i-users"/></svg>Apenas 5 vagas</span></p>
   </div>
 </section>
 
 <!-- ============ RESULTADOS ============ -->
-<section class="s s--light" id="resultados">
+<section class="s s--tint" id="resultados">
   <div class="wrap">
     <div class="s-head rv">
       <div>
-        <p class="s-eyebrow">Resultados de Ana Paula</p>
-        <h2 class="s-h2">Experiência clínica que <em>fundamenta o método</em></h2>
+        <p class="s-eyebrow">Resultados</p>
+        <h2 class="s-h2">Agora acompanhe a evolução da pele de algumas pacientes com o <em>Skin Beauty Método</em></h2>
       </div>
-      <p class="s-lead">Os registros de evolução e os depoimentos de pacientes atendidas por Ana Paula demonstram resultados obtidos em sua prática clínica. O destaque está no raciocínio clínico utilizado para compreender as necessidades individuais de cada pele, desenvolver o tratamento personalizado e acompanhar a evolução.</p>
+      <p class="s-lead">Cada pele é única. Os fatores associados ao escurecimento e às inflamações podem variar entre pacientes. Por isso, cada tratamento começa com um olhar individualizado para a história e as necessidades de cada paciente.</p>
     </div>
-    <!-- FOTO/DEPOIMENTOS: substitua os espaços abaixo pelos materiais autorizados por Ana Paula. -->
-    <div class="s-proof">
-      <div class="s-phone rv"><div class="s-phone__screen"><span class="diamond" aria-hidden="true"></span><p>Registro de evolução<br>autorizado 01</p></div></div>
-      <div class="s-proof__col">
-        <div class="s-ph rv"><span class="s-ph__tag"><svg class="ic"><use href="#i-chat"/></svg>Depoimento de paciente</span><div class="s-ph__box">Depoimento autorizado 01</div></div>
-        <blockquote class="s-quote rv">“Espaço para o depoimento autorizado em destaque.”<cite>Paciente de Ana Paula</cite></blockquote>
-      </div>
-      <div class="s-proof__col">
-        <div class="s-ph rv"><span class="s-ph__tag"><svg class="ic"><use href="#i-chat"/></svg>Depoimento de paciente</span><div class="s-ph__box">Depoimento autorizado 02</div></div>
-        <div class="s-ph rv"><span class="s-ph__tag"><svg class="ic"><use href="#i-eye"/></svg>Registro de evolução</span><div class="s-ph__box">Registro autorizado 02</div></div>
-      </div>
+    <!-- ANTES E DEPOIS: em cada .ba, troque data-antes / data-depois pelos caminhos das fotos autorizadas (mesmo enquadramento e tamanho). -->
+    <div class="s-ba">
+      <figure class="ba rv" data-antes="" data-depois="">
+        <div class="ba__img ba__img--depois"><span class="ba__ph">Foto “depois” autorizada 01</span></div>
+        <div class="ba__img ba__img--antes"><span class="ba__ph">Foto “antes” autorizada 01</span></div>
+        <span class="ba__tag ba__tag--l">Antes</span><span class="ba__tag ba__tag--r">Depois</span>
+        <span class="ba__handle" aria-hidden="true"><i></i></span>
+        <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois — resultado 01">
+      </figure>
+      <figure class="ba rv" style="--d:.1s" data-antes="" data-depois="">
+        <div class="ba__img ba__img--depois"><span class="ba__ph">Foto “depois” autorizada 02</span></div>
+        <div class="ba__img ba__img--antes"><span class="ba__ph">Foto “antes” autorizada 02</span></div>
+        <span class="ba__tag ba__tag--l">Antes</span><span class="ba__tag ba__tag--r">Depois</span>
+        <span class="ba__handle" aria-hidden="true"><i></i></span>
+        <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois — resultado 02">
+      </figure>
     </div>
-    <p class="s-fine s-fine--dark rv">Os resultados apresentados são de pacientes atendidas por Ana Paula. Cada pele responde de maneira própria, e esses registros não representam garantia de resultados para outras pacientes ou para os atendimentos das participantes da formação.</p>
+    <!-- DEPOIMENTOS: troque o texto de cada blockquote pelo relato autorizado (sem dados pessoais) -->
+    <div class="s-quotes">
+      <blockquote class="s-q rv"><p>Espaço para o depoimento autorizado 01.</p><cite>Paciente de Ana Paula</cite></blockquote>
+      <blockquote class="s-q rv" style="--d:.08s"><p>Espaço para o depoimento autorizado 02.</p><cite>Paciente de Ana Paula</cite></blockquote>
+      <blockquote class="s-q rv" style="--d:.16s"><p>Espaço para o depoimento autorizado 03.</p><cite>Paciente de Ana Paula</cite></blockquote>
+    </div>
+    <p class="s-fine s-fine--dark rv">Resultados de pacientes atendidas por Ana Paula com o Skin Beauty Método. A resposta ao tratamento é individual e pode variar entre pacientes.</p>
   </div>
 </section>
 
 <!-- ============ PARA QUEM ============ -->
-<section class="s s--tint" id="para-quem">
+<section class="s s--light" id="para-quem">
   <div class="wrap">
-    <div class="s-head rv">
-      <div>
-        <p class="s-eyebrow">Requisitos de ingresso</p>
-        <h2 class="s-h2">Essa formação é <em>para você</em></h2>
-      </div>
-      <p class="s-lead">O Skin Beauty Método é destinado a profissionais que já possuem a formação exigida para ingresso e desejam aprender a desenvolver raciocínio clínico aplicado aos tratamentos personalizados de manchas íntimas.</p>
-    </div>
-    <div class="s-cards s-cards--5">
-      <article class="s-card rv"><span class="s-ico"><svg class="ic"><use href="#i-award"/></svg></span><h3>Formação técnica em Estética</h3><p>Profissionais com formação técnica em Estética.</p></article>
-      <article class="s-card rv" style="--d:.05s"><span class="s-ico"><svg class="ic"><use href="#i-cap"/></svg></span><h3>Graduadas</h3><p>Graduadas em Estética e Cosmetologia.</p></article>
-      <article class="s-card rv" style="--d:.1s"><span class="s-ico"><svg class="ic"><use href="#i-flask"/></svg></span><h3>Biomédicas</h3><p>Com especialização em Estética e Cosmetologia.</p></article>
-      <article class="s-card rv" style="--d:.15s"><span class="s-ico"><svg class="ic"><use href="#i-move"/></svg></span><h3>Fisioterapeutas</h3><p>Com especialização em Estética e Cosmetologia.</p></article>
-      <article class="s-card rv" style="--d:.2s"><span class="s-ico"><svg class="ic"><use href="#i-steth"/></svg></span><h3>Enfermeiras</h3><p>Com especialização em Estética e Cosmetologia.</p></article>
-    </div>
-    <div class="s-rules rv">
-      <p><b>Comprovação</b>A inscrição depende da comprovação da formação exigida e da análise dos requisitos de ingresso. A formação técnica em Estética possui limitações próprias de atuação, que devem ser respeitadas na aplicação dos conhecimentos.</p>
-      <p><b>Cursos livres</b>A formação não é indicada para quem possui somente cursos livres de beleza, sem a formação técnica ou superior exigida. Os conhecimentos básicos dessas formações são pré-requisitos para acompanhar o conteúdo.</p>
-      <p><b>Atribuições legais</b>A conclusão do curso não amplia atribuições legais nem substitui habilitações ou especializações exigidas para o exercício profissional.</p>
+    <div class="s-who rv">
+      <p class="s-eyebrow">Requisitos</p>
+      <h2 class="s-h2">Para quem é esta <em>formação?</em></h2>
+      <p class="s-who__text">Para esteticistas com formação técnica ou graduação em Estética e Cosmetologia e para biomédicas, enfermeiras, farmacêuticas e fisioterapeutas com especialização em Estética e Cosmetologia.</p>
+      <p class="s-who__note"><svg class="ic"><use href="#i-check"/></svg>É necessário possuir uma das formações acima. Cursos livres de beleza, por si só, não substituem essa formação.</p>
+      <a class="s-btn s-btn--dark" href="inscricao.html">Quero garantir minha vaga <svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ============ CANDIDATURAS ABERTAS (oferta) ============ -->
+<!-- ============ INSCRIÇÕES ABERTAS (oferta) ============ -->
 <section class="s s--dark s-offer" id="proximo-passo">
   <span class="s-emblem s-emblem--o" aria-hidden="true"></span>
   <div class="wrap s-offer__grid">
     <div class="rv">
-      <p class="s-eyebrow">Candidaturas abertas</p>
-      <h2 class="s-h2">Tudo pronto para você <em>desenvolver seu raciocínio clínico</em></h2>
-      <p class="s-lead">Estamos recebendo candidaturas para a turma presencial do Skin Beauty Método. Para conhecer as condições comerciais e verificar sua elegibilidade, preencha o formulário de candidatura.</p>
-      <ul class="s-chips">
-        <li><span class="s-chip__ico"><svg class="ic"><use href="#i-cal"/></svg></span>30 e 31 de janeiro de 2027</li>
-        <li><span class="s-chip__ico"><svg class="ic"><use href="#i-steth"/></svg></span>Teoria e prática supervisionada</li>
-        <li><span class="s-chip__ico"><svg class="ic"><use href="#i-users"/></svg></span>Apenas cinco participantes</li>
-        <li><span class="s-chip__ico"><svg class="ic"><use href="#i-chat"/></svg></span>90 dias de suporte</li>
-      </ul>
-      <p class="s-mini2"><span><svg class="ic"><use href="#i-pin"/></svg>Clínica Ana Paula Estética · Savassi</span><span><svg class="ic"><use href="#i-award"/></svg>Certificado de participação</span></p>
+      <p class="s-eyebrow">Inscrições abertas</p>
+      <h2 class="s-h2 s-h2--long">Agora falta pouco para você se tornar uma mentorada do Skin Beauty Método, e se tornar <em>referência em clareamento íntimo</em> com minha metodologia na sua cidade ou região.</h2>
+      <p class="s-lead">Dê o próximo passo na sua trajetória profissional. Preencha o formulário para saber mais e garantir sua vaga para participar da nossa formação. Serão apenas 5 profissionais nesta turma!</p>
     </div>
     <div class="s-ticket rv" style="--d:.12s">
-      <div class="s-ticket__top"><span class="s-b__tag s-b__tag--rose">Turma presencial</span><span class="s-ticket__badge">5 vagas</span></div>
       <p class="s-ticket__pre">Formação presencial em Belo Horizonte</p>
       <p class="s-ticket__date"><b class="num">30</b><span>e</span><b class="num">31</b></p>
       <p class="s-ticket__month">de janeiro de 2027</p>
-      <p class="s-ticket__place">Rua Antônio de Albuquerque, 606, sala 07, Edifício Fraternia, Savassi, Belo Horizonte/MG</p>
-      <a class="s-btn s-btn--grad s-btn--block" href="#candidatura">Quero me candidatar <svg class="ic"><use href="#i-arrow"/></svg></a>
-      <p class="s-trust s-trust--dark"><span><svg class="ic"><use href="#i-clip"/></svg>Candidatura</span><span><svg class="ic"><use href="#i-chat"/></svg>Conversa comercial</span><span><svg class="ic"><use href="#i-check"/></svg>Matrícula</span></p>
-      <p class="s-ticket__note">Após o envio, nossa equipe entrará em contato para orientar o agendamento de uma conversa comercial. A candidatura não garante reserva de vaga.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SUPORTE (selo) ============ -->
-<section class="s s--light s-seal">
-  <div class="wrap s-seal__in rv">
-    <div class="s-seal__badge"><b class="num">90 dias</b><small>de suporte</small></div>
-    <div>
-      <h2 class="s-h2">Suporte de <em>90 dias</em> após o curso</h2>
-      <p class="s-lead">Contados a partir do término do curso, pelo WhatsApp profissional de Ana Paula, para esclarecer dúvidas relacionadas à aplicação da metodologia.</p>
+      <p class="s-ticket__place">Clínica Ana Paula Estética · Rua Antônio de Albuquerque, 606, sala 07, Edifício Fraternia, Savassi, Belo Horizonte/MG</p>
+      <a class="s-btn s-btn--grad s-btn--block" href="inscricao.html">Quero garantir minha vaga <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <p class="s-ticket__msg">Preencha o formulário. Nossa equipe entrará em contato pelo WhatsApp para esclarecer suas dúvidas e ajudar você a garantir sua vaga.</p>
     </div>
   </div>
 </section>
@@ -1825,39 +1833,21 @@ footer{background:#2E1A15}
 <section class="s s--tint s-faq" id="duvidas">
   <div class="wrap s-faq__grid">
     <div class="rv s-faq__side">
-      <p class="s-eyebrow">Antes de se candidatar</p>
       <h2 class="s-h2">Dúvidas <em>frequentes</em></h2>
-      <p class="s-lead">Não encontrou o que procurava? Envie sua candidatura e esclareça na conversa com nossa equipe.</p>
+      <p class="s-lead">Ficou com alguma dúvida? Confira as respostas abaixo ou fale com nossa equipe pelo WhatsApp após preencher o formulário.</p>
     </div>
     <div class="rv" style="--d:.1s">
-__FAQ__
+      <details open><summary>Qual formação preciso ter para participar?</summary><p>Esteticistas precisam ter curso técnico ou graduação em Estética e Cosmetologia. Biomédicas, enfermeiras, farmacêuticas e fisioterapeutas precisam ter especialização em Estética e Cosmetologia.</p></details>
+      <details><summary>Onde e quando acontece o curso?</summary><p>A formação será presencial, nos dias 30 e 31 de janeiro de 2027, na Clínica Ana Paula Estética, na Savassi, em Belo Horizonte.</p></details>
+      <details><summary>Haverá prática em modelos?</summary><p>Sim. O segundo dia será dedicado à prática supervisionada em modelos, com orientação de Ana Paula.</p></details>
+      <details><summary>Receberei certificado?</summary><p>Sim. A formação inclui certificado de participação com a carga horária das atividades realizadas.</p></details>
+      <details><summary>Receberei produtos para começar a atender?</summary><p>A formação não inclui kit de produtos para levar. Os materiais necessários à prática serão disponibilizados durante o curso. Você aprenderá a selecionar os produtos conforme as necessidades de cada paciente.</p></details>
+      <details><summary>Terei suporte após o curso?</summary><p>Sim. Você terá 90 dias de suporte pelo WhatsApp profissional de Ana Paula, contados a partir do término do curso, para esclarecer dúvidas sobre a aplicação da metodologia.</p></details>
+      <details><summary>Como conhecer o investimento e as formas de pagamento?</summary><p>Clique em “Quero garantir minha vaga”, preencha o formulário e fale com nossa equipe pelo WhatsApp para conhecer o investimento e as opções de pagamento.</p></details>
+      <details><summary>Como confirmo minha inscrição?</summary><p>Após preencher o formulário, nossa equipe orientará você pelo WhatsApp sobre o pagamento e a conclusão da matrícula. A confirmação da inscrição será enviada ao finalizar esse processo.</p></details>
     </div>
   </div>
 </section>
-
-<!-- ============ CANDIDATURA ============ -->
-<section class="dark apply s-apply" id="candidatura">
-  <span class="apply__wm diamond" aria-hidden="true"></span>
-  <div class="wrap apply__grid">
-    <div class="apply__side rv">
-      <p class="s-eyebrow">Processo de seleção</p>
-      <h2 class="s-h2">Candidatura à turma do <em>Skin Beauty Método</em></h2>
-      <p class="lead">Aprenda a compreender as necessidades da pele, desenvolver raciocínio clínico e construir tratamentos personalizados de manchas íntimas com maior segurança e autonomia profissional.</p>
-      <div class="apply__tags">
-        <span class="chip">30 e 31 de janeiro de 2027</span>
-        <span class="chip">Belo Horizonte</span>
-        <span class="chip chip--gold">Apenas 5 vagas</span>
-      </div>
-      <ol class="steps">
-        <li>Preencha sua candidatura.</li>
-        <li>Converse com nossa equipe pelo WhatsApp.</li>
-        <li>Conheça as condições e os próximos passos.</li>
-      </ol>
-    </div>
-__FORM__
-  </div>
-</section>
-
 </main>
 
 <footer>
@@ -1872,7 +1862,7 @@ __FORM__
   </div>
 </footer>
 
-<div class="sticky" id="sticky"><a class="btn" href="#candidatura">Candidatar-me à turma <i aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></i></a></div>
+<div class="sticky" id="sticky"><a class="btn" href="inscricao.html">Quero garantir minha vaga <i aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></i></a></div>
 
 __DIALOG__
 
@@ -1882,7 +1872,7 @@ var CONFIG = {
   // Número que receberá os contatos COMERCIAIS (DDI+DDD+número, só dígitos).
   // Definir com Ana Paula — não é o canal de suporte pós-curso.
   whatsapp: '5531000000000',
-  mensagem: 'Olá! Preenchi a candidatura para a formação presencial Skin Beauty Método, nos dias 30 e 31 de janeiro de 2027, em Belo Horizonte. Gostaria de conhecer as condições e agendar uma conversa.',
+  mensagem: 'Olá! Preenchi o formulário de interesse na formação presencial Skin Beauty Método, nos dias 30 e 31 de janeiro de 2027, em Belo Horizonte. Gostaria de conhecer as condições e garantir minha vaga.',
   // URL que salva a candidatura ANTES do redirecionamento (webhook do CRM, Make/Zapier, Google Apps Script ou endpoint do WordPress).
   webhook: ''
 };
@@ -1895,14 +1885,6 @@ document.querySelectorAll('img[data-img]').forEach(function(i){ i.src=IMGS[i.dat
   var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
   function track(ev){ try{ (window.dataLayer=window.dataLayer||[]).push({event:ev}); }catch(e){} } // sem dados pessoais
 
-  /* Variação B da abertura (?v=b) */
-  if(/[?&]v=b\b/i.test(location.search)){
-    var h=$('#hero-title');
-    h.setAttribute('aria-label','Quando a pele não responde ao protocolo, você sabe como conduzir o tratamento?');
-    h.innerHTML='<span><b style="--i:0">Quando a pele <em>não</em></b></span><span><b style="--i:1"><em>responde</em> ao protocolo,</b></span><span><b style="--i:2">você sabe como conduzir</b></span><span><b style="--i:3">o tratamento?</b></span>';
-    $('#hero-lead').textContent='Desenvolva raciocínio clínico para compreender as necessidades da pele e criar tratamentos personalizados de manchas íntimas com segurança e autonomia profissional.';
-    $('#hero-cta span').textContent='Quero conhecer a formação';
-  }
   var hero=$('#hero');
   requestAnimationFrame(function(){ requestAnimationFrame(function(){ hero.classList.add('in'); }); });
 
@@ -1950,7 +1932,7 @@ document.querySelectorAll('img[data-img]').forEach(function(i){ i.src=IMGS[i.dat
     var sticky=$('#sticky'), heroSeen=true, formSeen=false;
     function upd(){ sticky.classList.toggle('on', !heroSeen && !formSeen); }
     new IntersectionObserver(function(es){ heroSeen=es[0].isIntersecting; upd(); },{threshold:.15}).observe(hero);
-    new IntersectionObserver(function(es){ formSeen=es[0].isIntersecting; upd(); },{threshold:.05}).observe($('#candidatura'));
+    new IntersectionObserver(function(es){ formSeen=es[0].isIntersecting; upd(); },{threshold:.05}).observe($('#proximo-passo'));
   } else { rv.forEach(function(el){ el.classList.add('in'); }); }
   function count(n){ n._c=1; if(calm) return; var to=+n.dataset.count, t0=performance.now();
     (function step(now){ var k=Math.min(1,(now-t0)/1500); n.textContent=Math.round(to*(1-Math.pow(1-k,3))); if(k<1) requestAnimationFrame(step); })(t0); }
@@ -1958,7 +1940,7 @@ document.querySelectorAll('img[data-img]').forEach(function(i){ i.src=IMGS[i.dat
 
   /* ——— Carrosséis de deslizar no celular ——— */
   (function(){
-    var mq=matchMedia('(max-width:600px)'), sels=['#protocolo .s-cards','#oportunidades .s-cols','#programa .s-mods','#turma .s-bento','#resultados .s-proof','#para-quem .s-cards','#para-quem .s-rules'];
+    var mq=matchMedia('(max-width:600px)'), sels=['#protocolo .s-cards','#oportunidades .s-cols','#programa .s-mods','#turma .s-bento','#resultados .s-quotes'];
     var built=false;
     function build(){ if(built||!mq.matches) return; built=true;
       sels.forEach(function(sel){ var r=$(sel); if(!r) return; r.classList.add('m-rail');
@@ -1978,6 +1960,14 @@ document.querySelectorAll('img[data-img]').forEach(function(i){ i.src=IMGS[i.dat
     }
     build(); if(mq.addEventListener) mq.addEventListener('change',build);
   })();
+
+  /* ——— Antes e depois (arrastar) ——— */
+  $$('.ba').forEach(function(f){
+    var r=f.querySelector('.ba__range');
+    ['antes','depois'].forEach(function(k){ var u=f.getAttribute('data-'+k); if(u){ var el=f.querySelector('.ba__img--'+k); el.style.backgroundImage='url("'+u+'")'; el.classList.add('has'); } });
+    function set(v){ f.style.setProperty('--pos',v+'%'); }
+    r.addEventListener('input',function(){ set(r.value); }); set(r.value);
+  });
 
 __FORMJS__
 })();

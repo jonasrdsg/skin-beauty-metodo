@@ -1,0 +1,99 @@
+
+/* ===================== Revisão Ana Paula (nov/2026) ===================== */
+:root{--r1:#E6A5BC;--r2:#EDB3C7;--r3:#DE9FB3;--g1:#F9D991;--g2:#FEF2B8;--g3:#ECC48B;
+  --goldm:linear-gradient(100deg,#C99A55 0%,#ECC48B 18%,#FEF2B8 38%,#F9D991 55%,#ECC48B 75%,#FEF2B8 100%)}
+/* hero rosé + dourado metálico */
+.hx{background:linear-gradient(115deg,var(--r3) 0%,var(--r1) 48%,var(--r2) 100%);color:#fff}
+.hx__bg{background:transparent}
+.hx__bg img{opacity:.35;mix-blend-mode:soft-light}
+.hx__bg::after{background:linear-gradient(90deg,rgba(214,140,166,.55) 0%,rgba(222,159,179,.35) 40%,rgba(237,179,199,0) 70%)}
+.hx__grain{opacity:.05}
+.hx .hx__title{font:600 clamp(40px,min(5.2vw,8vh),82px)/.98 var(--serif);text-transform:uppercase;letter-spacing:.01em;margin:0;color:#fff;filter:drop-shadow(0 2px 2px rgba(120,48,72,.28))}
+.hx .hx__title span{padding-bottom:.04em}
+.hx .hx__title b{background:var(--goldm);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:goldsheen 9s ease-in-out infinite}
+.hx .hx__title .hx__pre b{font-size:.5em;letter-spacing:.14em}
+@keyframes goldsheen{50%{background-position:100% 0}}
+.hx__brand{margin-top:clamp(14px,2.4vh,22px);font:500 clamp(24px,2.2vw,32px)/1.1 var(--serif);color:#fff;text-shadow:0 1px 3px rgba(120,48,72,.3)}
+.hx__claim{margin-top:6px;font-size:clamp(15px,1.2vw,17.5px);font-weight:600;color:#fff;text-shadow:0 1px 3px rgba(120,48,72,.3)}
+.hx .hx__lead{margin-top:clamp(10px,2vh,16px);color:#fff;text-shadow:0 1px 3px rgba(120,48,72,.35);max-width:33rem}
+.hx__btn--fill{background:var(--goldm);background-size:200% 100%;color:#5A3628;box-shadow:0 14px 30px -14px rgba(150,90,40,.7)}
+.hx__btn--fill:hover{background-position:100% 0;box-shadow:0 18px 34px -14px rgba(150,90,40,.8)}
+.hx__btn--line{color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.75)}
+.hx__btn--line:hover{background:rgba(255,255,255,.14)}
+.hx__dots i{background:var(--goldm);box-shadow:0 0 0 2px var(--r1)}
+.hx__proof p{color:rgba(255,255,255,.92);text-shadow:0 1px 2px rgba(120,48,72,.3)}
+.hx__proof b{color:#fff}
+.hx__arch{background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.42) 60%,rgba(255,255,255,.12) 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.8),0 30px 60px -40px rgba(140,60,90,.5)}
+.hx__logo i{background:linear-gradient(130deg,#C99A55 0%,#ECC48B 30%,#FEF2B8 50%,#F9D991 70%,#ECC48B 100%);opacity:.95}
+.hx__logo{filter:drop-shadow(0 1px 1px rgba(150,95,40,.35))}
+.hx__floor{background:linear-gradient(180deg,rgba(230,165,188,0) 0%,rgba(222,159,179,.6) 60%,rgba(222,159,179,.95) 100%)}
+.hx__floor::after{background:radial-gradient(closest-side,rgba(140,60,90,.3),rgba(140,60,90,0))}
+.head:not(.is-stuck) .brand,.head:not(.is-stuck) .brand b{color:#fff}
+.head:not(.is-stuck) .brand small,.head:not(.is-stuck) .brand .diamond{color:var(--g2)}
+.head:not(.is-stuck) .nav__links{background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 1px rgba(255,255,255,.45)}
+.head:not(.is-stuck) .nav__links a{color:#fff}
+.head:not(.is-stuck) .nav__links a:hover{background:rgba(255,255,255,.22);color:#fff}
+.nav .btn,.head:not(.is-stuck) .nav .btn{background:var(--goldm);background-size:200% 100%;color:#5A3628}
+@media(max-width:1280px){.nav .btn span{font-size:10.5px}}
+@media(max-width:900px){
+  .hx__bg::after{background:linear-gradient(180deg,rgba(214,140,166,.45) 0%,rgba(222,159,179,.3) 60%,rgba(237,179,199,0) 100%)}
+  .hx .hx__title{font-size:clamp(38px,11.5vw,56px)}
+}
+@media(max-width:600px){.hx .hx__title{font-size:clamp(36px,11vw,46px)}.hx__brand{font-size:24px}.hx__claim{font-size:14.5px}}
+/* diferenciais */
+.s-eyebrow--wide{letter-spacing:.5em}
+.s-head--solo{grid-template-columns:1fr}
+.s-head--solo .s-h2{max-width:22ch}
+/* origem */
+.s-origin{max-width:980px;margin:0 auto clamp(40px,5vw,60px);text-align:center}
+.s-origin__text{font:400 clamp(22px,2.4vw,34px)/1.35 "Manrope",var(--sans);letter-spacing:-.025em;color:#3E2520;text-wrap:balance}
+.s-origin__text em{font-style:normal;color:#C96164}
+.s-tile--pattern{position:relative;isolation:isolate}
+.s-tile--pattern::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:url("__DIA_PATTERN__") center/86px 86px repeat;opacity:.13}
+.s-tile--soft h3{font:500 clamp(21px,1.9vw,26px)/1.2 "Manrope",var(--sans);letter-spacing:-.03em;color:#3E2520}
+.s-tile--photo img{object-position:50% 12%}
+.s-tile--photo figcaption{top:auto;bottom:22px;font-size:20px}
+.s-tile--photo figcaption small{display:block;margin-top:6px;font-size:12px;letter-spacing:0;opacity:.85}
+.s-tile--photo::after{background:linear-gradient(180deg,transparent 45%,rgba(62,37,32,.7))}
+/* turma: 3 cartões */
+.s-bento--3{grid-template-columns:repeat(3,1fr)}
+.s-bento--3 .s-b{grid-column:auto}
+.s-mock--days{display:flex;align-items:baseline;justify-content:center;gap:10px;color:#3E2520}
+.s-mock--days b{font:200 clamp(110px,10vw,150px)/1 "Manrope",var(--sans);letter-spacing:-.06em}
+.s-mock--days span{font:500 26px/1 "Manrope",var(--sans)}
+/* resultados: antes e depois */
+.s-ba{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ba{position:relative;margin:0;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F6DCDF;--pos:50%;touch-action:pan-y;box-shadow:0 30px 50px -36px rgba(132,82,64,.6)}
+.ba__img{position:absolute;inset:0;background:center/cover no-repeat;display:grid;place-items:center}
+.ba__img--depois{background-color:#F4C9CF}
+.ba__img--antes{background-color:#EAB3BC;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba__img.has .ba__ph{display:none}
+.ba__ph{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#845240;text-align:center;padding:0 20px}
+.ba__img--antes .ba__ph{transform:translateX(-25%)}.ba__img--depois .ba__ph{transform:translateX(25%)}
+.ba__tag{position:absolute;top:14px;z-index:2;padding:6px 12px;border-radius:999px;background:rgba(62,37,32,.72);color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;pointer-events:none}
+.ba__tag--l{left:14px}.ba__tag--r{right:14px}
+.ba__handle{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;z-index:2;pointer-events:none;box-shadow:0 0 10px rgba(0,0,0,.25)}
+.ba__handle i{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px;border-radius:50%;background:#fff;box-shadow:0 8px 20px rgba(62,37,32,.35)}
+.ba__handle i::before,.ba__handle i::after{content:"";position:absolute;top:50%;width:8px;height:8px;margin-top:-4px;border:solid #845240;border-width:0 0 2px 2px}
+.ba__handle i::before{left:11px;transform:rotate(45deg)}.ba__handle i::after{right:11px;transform:rotate(-135deg)}
+.ba__range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:3;-webkit-appearance:none;appearance:none}
+.ba__range:focus-visible+*{outline:none}
+.ba:focus-within{outline:2px solid #C96164;outline-offset:3px}
+.s-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.s-q{margin:0;padding:26px 26px 24px;border-radius:22px;background:#fff;border:1px solid rgba(132,82,64,.08);box-shadow:0 24px 40px -32px rgba(132,82,64,.55)}
+.s-q::before{content:"“";display:block;height:28px;font:400 64px/.9 var(--serif);color:#E6A5BC}
+.s-q p{font:400 16px/1.6 "Manrope",var(--sans);color:#3E2520}
+.s-q cite{display:block;margin-top:16px;font-style:normal;font-size:12px;font-weight:600;color:#C96164}
+/* para quem */
+.s-who{max-width:860px;margin:0 auto;text-align:center}
+.s-who__text{margin-top:22px;font:400 clamp(19px,1.8vw,24px)/1.5 "Manrope",var(--sans);letter-spacing:-.015em;color:#3E2520}
+.s-who__note{display:inline-flex;align-items:flex-start;gap:10px;margin:22px auto 30px;padding:14px 20px;border-radius:16px;background:#FCE9E7;font-size:14px;line-height:1.55;color:#6A4A40;text-align:left}
+.s-who__note .ic{flex:none;width:18px;height:18px;margin-top:1px;color:#C96164;stroke-width:2.2}
+/* oferta */
+.s-h2--long{font-size:clamp(26px,2.7vw,40px);line-height:1.15}
+.s-ticket__pre{margin-top:4px}
+.s-ticket__msg{margin-top:16px;font-size:13px;line-height:1.55;color:rgba(62,37,32,.7)}
+@media(max-width:900px){.s-ba,.s-quotes{grid-template-columns:1fr}.s-bento--3{grid-template-columns:1fr}}
+@media(max-width:600px){.s-origin__text{font-size:21px}.s-mock--days b{font-size:110px}.s-who__text{font-size:18px}}
+.ba__ph{position:absolute;top:50%;width:50%;transform:translateY(-50%)!important;padding:0 18px}
+.ba__img--antes .ba__ph{left:0}.ba__img--depois .ba__ph{right:0}

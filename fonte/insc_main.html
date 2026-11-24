@@ -1,0 +1,74 @@
+<main id="topo" class="ins">
+  <section class="ins__top">
+    <div class="wrap ins__head">
+      <a class="ins__back" href="index.html"><svg class="ic" viewBox="0 0 24 24" style="transform:scaleX(-1)"><use href="#i-arrow"/></svg> Voltar para a página</a>
+      <p class="ins__eyebrow">Formação presencial · 30 e 31 de janeiro de 2027 · Belo Horizonte</p>
+      <h1 class="ins__title">Seu interesse na formação</h1>
+      <p class="ins__lead">Preencha os dados abaixo. Ao final, você será direcionada ao WhatsApp da nossa equipe para esclarecer suas dúvidas e garantir sua vaga. Turma com apenas 5 vagas.</p>
+    </div>
+  </section>
+  <section class="ins__body">
+    <div class="wrap">
+    <div class="form ins__card">
+      <form id="form" novalidate>
+        <fieldset class="ins__group">
+          <legend><span>01</span> Identificação</legend>
+          <div class="fields">
+            <div class="f f--full"><label for="nome">Nome completo</label><input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome completo"></div>
+            <div class="f"><label for="whats">WhatsApp com DDD</label><input id="whats" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" required placeholder="(31) 90000-0000"></div>
+            <div class="f"><label for="cidade">Cidade e estado</label><input id="cidade" name="cidade" type="text" autocomplete="address-level2" required placeholder="Ex.: Belo Horizonte/MG"></div>
+          </div>
+        </fieldset>
+        <fieldset class="ins__group">
+          <legend><span>02</span> Formação profissional</legend>
+          <div class="fields">
+            <div class="f f--full"><label for="formacao">Qual é a sua formação?</label>
+              <select id="formacao" name="formacao" required>
+                <option value="" selected disabled>Selecione sua formação</option>
+                <option>Formação técnica em Estética</option>
+                <option>Graduação em Estética e Cosmetologia</option>
+                <option>Biomedicina com especialização em Estética e Cosmetologia</option>
+                <option>Enfermagem com especialização em Estética e Cosmetologia</option>
+                <option>Farmácia com especialização em Estética e Cosmetologia</option>
+                <option>Fisioterapia com especialização em Estética e Cosmetologia</option>
+                <option value="Outra">Outra formação</option>
+              </select>
+            </div>
+            <p class="ins__block f--full" id="block" role="status">Esta formação é exclusiva para profissionais com uma das formações listadas acima. Cursos livres de beleza, por si só, não substituem essa formação. Se tiver dúvidas sobre o seu caso, fale com nossa equipe pelo Instagram da Ana Paula Estética.</p>
+            <div class="f"><label for="espec">Especialização <small>(quando aplicável)</small></label><input id="espec" name="especializacao" type="text" placeholder="Curso e instituição"></div>
+            <div class="f"><label for="exp">Tempo de atuação na área</label>
+              <select id="exp" name="experiencia" required>
+                <option value="" selected disabled>Selecione</option>
+                <option>Ainda não atuo</option>
+                <option>Menos de 1 ano</option>
+                <option>De 1 a 3 anos</option>
+                <option>De 3 a 5 anos</option>
+                <option>Mais de 5 anos</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="ins__group">
+          <legend><span>03</span> Disponibilidade</legend>
+          <p class="ins__q">Você tem disponibilidade para participar presencialmente em Belo Horizonte nos dias 30 e 31 de janeiro de 2027?</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="disponibilidade" value="Sim" required><span>Sim, tenho disponibilidade</span></label>
+            <label class="opt"><input type="radio" name="disponibilidade" value="Preciso confirmar"><span>Preciso confirmar</span></label>
+            <label class="opt"><input type="radio" name="disponibilidade" value="Não"><span>Não tenho</span></label>
+          </div>
+        </fieldset>
+        <label class="check"><input type="checkbox" name="consentimento" value="Sim" required><span>Autorizo o uso dos meus dados para contato da equipe Ana Paula Estética sobre a formação, conforme o <a href="#privacidade" id="open-priv">aviso de privacidade</a>.</span></label>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn ins__submit" type="submit" id="go">Continuar no WhatsApp <i aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></button>
+        <p class="note form__foot">Seus dados são usados apenas para o contato sobre esta formação.</p>
+      </form>
+      <div class="done" id="done" tabindex="-1">
+        <span class="diamond diamond--shine" aria-hidden="true"></span>
+        <h3>Recebemos seu interesse</h3>
+        <p>Abrimos o WhatsApp da nossa equipe para você continuar a conversa. Se a janela não abriu, use o botão abaixo.</p>
+        <a class="btn" id="wa-again" href="#" target="_blank" rel="noopener">Abrir o WhatsApp <i aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
