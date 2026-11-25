@@ -2084,10 +2084,13 @@ var CONFIG = {
     /* os cards ficam parados na tela e andam para o lado conforme a página desce,
        com uma pausa em cada card para dar tempo de ler (o dedo continua mandando) */
     if(calm || !mq.matches) return;
-    var PER=.75;   // quanto a página desce (em alturas de tela) para passar de um card ao próximo
+    var PER=.6;   // quanto a página desce (em alturas de tela) para passar de um card ao próximo
     var rails=[].slice.call(d.querySelectorAll('.m-rail, .s-pair--vid .s-pair__imgs')), tk=0, list=[];
     rails.forEach(function(r){
       var vid=r.closest('.s-pair--vid'), parts=vid?[vid]:[r.previousElementSibling,r,r.nextElementSibling].filter(function(x){return x&&(x===r||x.classList.contains('m-hint')||x.classList.contains('m-dots'));});
+      // se couber na tela, o título da seção fica preso junto com os cards
+      var hd=parts[0].previousElementSibling, hsum=parts.reduce(function(a,x){ return a+x.offsetHeight; },0);
+      if(hd && (hd.classList.contains('s-head')||hd.classList.contains('s-center')) && hd.offsetHeight+hsum+24 <= innerHeight-120){ parts.unshift(hd); }
       var wrap=d.createElement('div'); wrap.className='m-pin'; var inn=d.createElement('div'); inn.className='m-pin__in';
       parts[0].parentNode.insertBefore(wrap,parts[0]); wrap.appendChild(inn); parts.forEach(function(x){ inn.appendChild(x); });
       r.classList.add('m-auto');
