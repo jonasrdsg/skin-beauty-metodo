@@ -1477,6 +1477,12 @@ footer{background:#2E1A15}
 @media(max-width:900px){.s-pairs,.s-media{grid-template-columns:1fr}}
 @media(max-width:600px){.s-pair--vid .s-pair__imgs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:68%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}.s-pair--vid .s-pair__imgs::-webkit-scrollbar{display:none}.s-pair--vid .s-pair__imgs>div{scroll-snap-align:start}}
 @media(max-width:600px){.s-pair{padding:8px;border-radius:22px}}
+
+/* ===== Efeito de abas: cada seção desliza por cima da anterior ===== */
+.stack>.s{position:sticky;top:var(--st,0px);z-index:1;border-radius:clamp(24px,3.2vw,44px) clamp(24px,3.2vw,44px) 0 0;
+  box-shadow:0 -28px 60px -34px rgba(62,37,32,.42),inset 0 0 0 100vmax rgba(42,24,20,var(--dim,0));will-change:transform}
+.stack>.s.s--dark{background-color:#3A221D}
+.stack>.s:last-of-type{border-radius:clamp(24px,3.2vw,44px) clamp(24px,3.2vw,44px) 0 0}
 </style>
 </head>
 <body>
@@ -1973,6 +1979,26 @@ document.querySelectorAll('img[data-img]').forEach(function(i){ i.src=IMGS[i.dat
     (function step(now){ var k=Math.min(1,(now-t0)/1500); n.textContent=Math.round(to*(1-Math.pow(1-k,3))); if(k<1) requestAnimationFrame(step); })(t0); }
 
 
+
+  /* ——— Efeito de abas: as seções ficam presas e a próxima desliza por cima ——— */
+  (function(){
+    if(calm) return;
+    var main=d.querySelector('main'); if(!main) return;
+    var secs=[].slice.call(main.children).filter(function(e){ return e.classList.contains('s'); });
+    if(secs.length<2) return;
+    main.classList.add('stack'); var tk=0, vh=innerHeight;
+    function layout(){ vh=innerHeight;
+      secs.forEach(function(s){ var h=s.offsetHeight; s.style.setProperty('--st',Math.min(0,vh-h)+'px');
+        s.style.transformOrigin='50% '+(h>vh?(h-vh/2):h/2)+'px'; }); fx(); }
+    function fx(){ tk=0;
+      for(var i=0;i<secs.length;i++){ var s=secs[i], n=secs[i+1];
+        var p=n?Math.max(0,Math.min(1,(vh-n.getBoundingClientRect().top)/vh)):0;
+        if(p<=0){ if(s._p){ s.style.transform=''; s.style.setProperty('--dim',0); s._p=0; } continue; }
+        s._p=p; s.style.transform='scale('+(1-.06*p).toFixed(4)+')'; s.style.setProperty('--dim',(.38*p).toFixed(3));
+      } }
+    addEventListener('scroll',function(){ if(!tk) tk=requestAnimationFrame(fx); },{passive:true});
+    addEventListener('resize',layout); addEventListener('load',layout); layout();
+  })();
   /* ——— Carrosséis de deslizar no celular ——— */
   (function(){
     var mq=matchMedia('(max-width:600px)'), sels=['#protocolo .s-cards','#oportunidades .s-cols','#programa .s-mods','#turma .s-bento','#resultados .s-pairs'];

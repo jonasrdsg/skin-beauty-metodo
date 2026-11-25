@@ -1526,6 +1526,12 @@ footer{background:#2E1A15}
 @media(max-width:900px){.s-pairs,.s-media{grid-template-columns:1fr}}
 @media(max-width:600px){.s-pair--vid .s-pair__imgs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:68%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}.s-pair--vid .s-pair__imgs::-webkit-scrollbar{display:none}.s-pair--vid .s-pair__imgs>div{scroll-snap-align:start}}
 @media(max-width:600px){.s-pair{padding:8px;border-radius:22px}}
+
+/* ===== Efeito de abas: cada seção desliza por cima da anterior ===== */
+.stack>.s{position:sticky;top:var(--st,0px);z-index:1;border-radius:clamp(24px,3.2vw,44px) clamp(24px,3.2vw,44px) 0 0;
+  box-shadow:0 -28px 60px -34px rgba(62,37,32,.42),inset 0 0 0 100vmax rgba(42,24,20,var(--dim,0));will-change:transform}
+.stack>.s.s--dark{background-color:#3A221D}
+.stack>.s:last-of-type{border-radius:clamp(24px,3.2vw,44px) clamp(24px,3.2vw,44px) 0 0}
 /* ===== Página de inscrição ===== */
 .ins__top{background:linear-gradient(115deg,var(--r3) 0%,var(--r1) 48%,var(--r2) 100%);padding:clamp(130px,16vh,170px) 0 clamp(120px,14vw,170px);color:#fff;position:relative;overflow:hidden}
 .ins__top::after{content:"";position:absolute;inset:0;background:url("assets/diamond-pattern-w.svg") center/86px 86px repeat;opacity:.18;pointer-events:none}
