@@ -1378,6 +1378,9 @@ footer{background:#2E1A15}
     margin-left:calc(-1*var(--gut));margin-right:calc(-1*var(--gut));padding:6px var(--gut) 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .m-rail::-webkit-scrollbar{display:none}
   .m-rail.m-auto,.s-pair__imgs.m-auto{scroll-snap-type:none}
+  @supports (overflow:clip){.s{overflow:clip}}
+  .m-pin{position:relative}
+  .m-pin__in{position:sticky;top:88px}
   .m-rail>*{flex:0 0 84%;scroll-snap-align:start;margin:0!important;grid-column:auto!important;grid-row:auto!important}
   .s-cards--3.m-rail .s-card{display:block}
   .s-cards--3.m-rail .s-ico{margin-bottom:18px}
@@ -2052,24 +2055,38 @@ var CONFIG = {
     }
     build(); if(mq.addEventListener) mq.addEventListener('change',build);
 
-    /* os cards andam para o lado conforme a página desce (o dedo continua mandando) */
-    if(calm) return;
-    var rails=[].slice.call(d.querySelectorAll('.m-rail, .s-pair--vid .s-pair__imgs')), tk=0;
+    /* os cards ficam parados na tela e andam para o lado conforme a página desce,
+       com uma pausa em cada card para dar tempo de ler (o dedo continua mandando) */
+    if(calm || !mq.matches) return;
+    var PER=.75;   // quanto a página desce (em alturas de tela) para passar de um card ao próximo
+    var rails=[].slice.call(d.querySelectorAll('.m-rail, .s-pair--vid .s-pair__imgs')), tk=0, list=[];
     rails.forEach(function(r){
+      var vid=r.closest('.s-pair--vid'), parts=vid?[vid]:[r.previousElementSibling,r,r.nextElementSibling].filter(function(x){return x&&(x===r||x.classList.contains('m-hint')||x.classList.contains('m-dots'));});
+      var wrap=d.createElement('div'); wrap.className='m-pin'; var inn=d.createElement('div'); inn.className='m-pin__in';
+      parts[0].parentNode.insertBefore(wrap,parts[0]); wrap.appendChild(inn); parts.forEach(function(x){ inn.appendChild(x); });
       r.classList.add('m-auto');
-      function hold(){ r._hold=Date.now()+3000; r.classList.remove('m-auto'); clearTimeout(r._ht); r._ht=setTimeout(function(){ r.classList.add('m-auto'); },3000); }
-      r.addEventListener('touchstart',hold,{passive:true}); r.addEventListener('wheel',hold,{passive:true});
-      r.addEventListener('pointerdown',hold,{passive:true});
+      function hold(){ r._hold=Date.now()+2500; r.classList.remove('m-auto'); clearTimeout(r._ht); r._ht=setTimeout(function(){ r.classList.add('m-auto'); },2500); }
+      r.addEventListener('touchstart',hold,{passive:true}); r.addEventListener('pointerdown',hold,{passive:true});
+      list.push({r:r,wrap:wrap,inn:inn});
     });
-    function drive(){ tk=0; if(!mq.matches) return; var vh=innerHeight;
-      rails.forEach(function(r){ if(r._hold&&Date.now()<r._hold) return;
-        var max=r.scrollWidth-r.clientWidth; if(max<=0) return;
-        var b=r.getBoundingClientRect(); if(b.bottom<0||b.top>vh) return;
-        // começa quando o carrossel entra embaixo (90% da tela) e termina quando o topo chega a 15%
-        var start=vh*.9, end=vh*.15, p=(start-b.top)/(start-end); p=Math.max(0,Math.min(1,p));
-        r.scrollLeft=Math.round(p*max);
+    function stops(r){ var pad=parseFloat(getComputedStyle(r).paddingLeft)||0, max=r.scrollWidth-r.clientWidth, out=[];
+      [].forEach.call(r.children,function(it){ var x=Math.min(max,Math.max(0,it.offsetLeft-r.offsetLeft-pad)); if(!out.length||x-out[out.length-1]>8) out.push(x); });
+      if(out[out.length-1]<max-8) out.push(max); return out; }
+    function layout(){ var vh=innerHeight;
+      list.forEach(function(o){ o.st=stops(o.r); var h=o.inn.offsetHeight;
+        o.top=Math.max(88,Math.round((vh-h)/2)); o.inn.style.top=o.top+'px';
+        o.wrap.style.height=(h+Math.max(0,o.st.length-1)*vh*PER+vh*.25)+'px'; }); drive(); }
+    function ease(t){ return t*t*(3-2*t); }
+    function drive(){ tk=0;
+      list.forEach(function(o){ var r=o.r; if(r._hold&&Date.now()<r._hold) return; var st=o.st; if(!st||st.length<2) return;
+        var b=o.wrap.getBoundingClientRect(), run=b.height-o.inn.offsetHeight; if(run<=0) return;
+        var p=Math.max(0,Math.min(1,(o.top-b.top)/run)), seg=p*(st.length-1)*1.0, i=Math.min(st.length-2,Math.floor(seg)), f=seg-i;
+        // 45% do trecho parado no card, 55% andando
+        var m=f<.45?0:ease((f-.45)/.55);
+        r.scrollLeft=Math.round(st[i]+(st[i+1]-st[i])*m);
       }); }
-    addEventListener('scroll',function(){ if(!tk) tk=requestAnimationFrame(drive); },{passive:true}); drive();
+    addEventListener('scroll',function(){ if(!tk) tk=requestAnimationFrame(drive); },{passive:true});
+    addEventListener('resize',layout); addEventListener('load',layout); layout();
   })();
 
   /* ——— Antes e depois (arrastar) ——— */
