@@ -1458,8 +1458,11 @@ footer{background:#2E1A15}
 .s-pair__imgs img{width:100%;height:100%;object-fit:cover;display:block}
 .s-pair figcaption{padding:14px 8px 4px;font-size:13px;line-height:1.5;color:#6A4A40}
 .s-pair figcaption b{display:block;margin-bottom:2px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#C96164}
-.s-media{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;align-items:stretch}
-.s-pair--vid .s-pair__imgs>div{aspect-ratio:9/16;background:#000}
+.s-media{display:grid;grid-template-columns:2.1fr 1fr;gap:18px;margin-top:18px;align-items:stretch}
+.s-pair--vid .s-pair__imgs{grid-template-columns:repeat(3,1fr)}
+.s-pair--vid .s-pair__imgs>div{aspect-ratio:9/16;background:#2A1814}
+.s-swipe{display:none}@media(max-width:600px){.s-swipe{display:inline}}
+.s-pair__imgs iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
 .s-pair__imgs video{width:100%;height:100%;object-fit:cover;display:block;background:#EAB3BC}
 .s-print{position:relative;margin:0;padding:22px;border-radius:26px;background:linear-gradient(160deg,#fff,#FCE9E7);display:flex;flex-direction:column;justify-content:center;box-shadow:0 30px 50px -36px rgba(132,82,64,.6)}
 .s-print__tag{align-self:flex-start;padding:6px 12px;border-radius:999px;background:var(--goldm);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#5A3628}
@@ -1468,6 +1471,7 @@ footer{background:#2E1A15}
 .s-print blockquote p{font:500 clamp(19px,1.6vw,22px)/1.35 var(--serif);font-style:italic;color:#3E2520}
 .s-print cite{display:block;margin-top:10px;font-style:normal;font-size:12px;font-weight:600;color:#C96164}
 @media(max-width:900px){.s-pairs,.s-media{grid-template-columns:1fr}}
+@media(max-width:600px){.s-pair--vid .s-pair__imgs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:68%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}.s-pair--vid .s-pair__imgs::-webkit-scrollbar{display:none}.s-pair--vid .s-pair__imgs>div{scroll-snap-align:start}}
 @media(max-width:600px){.s-pair{padding:8px;border-radius:22px}}
 </style>
 </head>
@@ -1807,10 +1811,11 @@ footer{background:#2E1A15}
     <div class="s-media">
       <figure class="s-pair s-pair--vid rv">
         <div class="s-pair__imgs">
-          <div><video src="assets/res-video-01.mp4" poster="assets/res-video-01.jpg" controls playsinline preload="none" width="576" height="1024"></video><span class="ba__tag ba__tag--l">Vídeo 01</span></div>
-          <div><video src="assets/res-video-02.mp4" poster="assets/res-video-02.jpg" controls playsinline preload="none" width="576" height="1024"></video><span class="ba__tag ba__tag--l">Vídeo 02</span></div>
+          <div><iframe src="https://www.youtube-nocookie.com/embed/mQXAg3nBCLg?rel=0&amp;playsinline=1&amp;modestbranding=1" title="Vídeo 01 – Skin Beauty Método" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div><iframe src="https://www.youtube-nocookie.com/embed/wDwhPNh7EM8?rel=0&amp;playsinline=1&amp;modestbranding=1" title="Vídeo 02 – Skin Beauty Método" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div><iframe src="https://www.youtube-nocookie.com/embed/vOaCicKqc10?rel=0&amp;playsinline=1&amp;modestbranding=1" title="Vídeo 03 – Skin Beauty Método" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
         </div>
-        <figcaption><b>Na prática</b> Atendimento em clínica e tecnologia aplicada ao tratamento</figcaption>
+        <figcaption><b>Na prática</b> Veja os atendimentos e os resultados em vídeo<span class="s-swipe"> · arraste para o lado para ver os 3 vídeos</span></figcaption>
       </figure>
       <figure class="s-print rv" style="--d:.16s">
         <span class="s-print__tag">Depoimento real</span>
