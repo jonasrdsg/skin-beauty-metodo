@@ -1377,6 +1377,7 @@ footer{background:#2E1A15}
   .m-rail{display:flex!important;grid-template-columns:none!important;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-left:var(--gut);
     margin-left:calc(-1*var(--gut));margin-right:calc(-1*var(--gut));padding:6px var(--gut) 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .m-rail::-webkit-scrollbar{display:none}
+  .m-rail.m-auto{scroll-snap-type:none}
   .m-rail>*{flex:0 0 84%;scroll-snap-align:start;margin:0!important;grid-column:auto!important;grid-row:auto!important}
   .s-cards--3.m-rail .s-card{display:block}
   .s-cards--3.m-rail .s-ico{margin-bottom:18px}
@@ -2050,6 +2051,25 @@ var CONFIG = {
       });
     }
     build(); if(mq.addEventListener) mq.addEventListener('change',build);
+
+    /* os cards andam para o lado conforme a página desce (o dedo continua mandando) */
+    if(calm) return;
+    var rails=[].slice.call(d.querySelectorAll('.m-rail')), tk=0;
+    rails.forEach(function(r){
+      r.classList.add('m-auto');
+      function hold(){ r._hold=Date.now()+3000; r.classList.remove('m-auto'); clearTimeout(r._ht); r._ht=setTimeout(function(){ r.classList.add('m-auto'); },3000); }
+      r.addEventListener('touchstart',hold,{passive:true}); r.addEventListener('wheel',hold,{passive:true});
+      r.addEventListener('pointerdown',hold,{passive:true});
+    });
+    function drive(){ tk=0; if(!mq.matches) return; var vh=innerHeight;
+      rails.forEach(function(r){ if(r._hold&&Date.now()<r._hold) return;
+        var max=r.scrollWidth-r.clientWidth; if(max<=0) return;
+        var b=r.getBoundingClientRect(); if(b.bottom<0||b.top>vh) return;
+        // começa quando o carrossel entra embaixo (90% da tela) e termina quando o topo chega a 15%
+        var start=vh*.9, end=vh*.15, p=(start-b.top)/(start-end); p=Math.max(0,Math.min(1,p));
+        r.scrollLeft=Math.round(p*max);
+      }); }
+    addEventListener('scroll',function(){ if(!tk) tk=requestAnimationFrame(drive); },{passive:true}); drive();
   })();
 
   /* ——— Antes e depois (arrastar) ——— */
